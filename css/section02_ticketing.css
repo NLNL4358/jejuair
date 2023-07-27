@@ -1,0 +1,730 @@
+.section02_ticketing{
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.section02_inner{
+  height: 340px;
+  position: relative;
+}
+.quick_nav{
+  width: 525px;
+  height: 75px;
+  position: absolute;
+  /* top : 0px;
+  transform: translate(0% , -100%); */
+  bottom : 100%;
+  z-index: 7;
+  display: flex;
+}
+.quick_menu{
+  width: 175px;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+  .quick_menu.selected{
+    opacity: 1.0;
+    background-color: white;
+  }
+.ticketing_reservation{
+  background-color: #f8580e;
+}
+.mobile_ticket_check{
+  background-color: #222A73;
+}
+.departure_and_arrival_inquiries{
+  background-color: #FFB13D;
+}
+
+.quick_menu_img{
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+
+/* quick 메뉴 이미지 */
+.ticketing_reservation .quick_menu_img{
+  background-image: url("../img/ticket/searchAir.png");
+}
+  .ticketing_reservation.selected .quick_menu_img{
+    background-image: url("../img/ticket/searchAirColor.png");
+  }
+.mobile_ticket_check .quick_menu_img{
+  background-image: url("../img/ticket/mobileTicket.png");
+}
+  .mobile_ticket_check.selected .quick_menu_img{
+    background-image: url("../img/ticket/mobileTicketColor.png");
+  }
+.departure_and_arrival_inquiries .quick_menu_img{
+  background-image: url("../img/ticket/arrivalSearch.png");
+}
+  .departure_and_arrival_inquiries.selected .quick_menu_img{
+    background-image: url("../img/ticket/arrivalSearchColor.png");
+  }
+
+/* 퀵메뉴 text */  
+.quick_menu_name{
+  margin-left : 5px;
+  color : white;
+  font-weight: bold;
+}
+  .selected .quick_menu_name{
+    color : var(--point-color1)
+  }
+
+
+
+/* quick_menu_wrap */
+.quick_menu_wrap{
+  width: 100%;
+  position: relative;
+}
+
+/* .quick_menu_wrap_deco_box{
+  position: absolute;
+  left: 100%;
+  top: 0;
+
+  z-index: 5;
+  width: 80px;
+  height: 60px;
+  transform: translate(-100%);
+  background-color: var(--point-color1);
+  border-radius: 0px 0px 0px 100%;
+} */
+
+.quick_menu_contents{
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  padding: 0px;
+  
+}
+.quick_menu_contents.selected{
+  width: 100%;
+  height: 340px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+
+  padding: 40px 45px;
+}
+
+/* 티케팅 타입 */
+.ticketing_type_wrap ul{
+  display: flex;
+}
+.ticketing_type{
+  border-bottom: 2px solid var(--border-color1);
+}
+.ticketing_type p{
+  padding : 1rem 1.5rem;
+  opacity: 0.7;
+}
+  .ticketing_type.selected{
+    border-bottom: 3px solid var(--point-color1);
+  }
+  .ticketing_type.selected p{
+    opacity: 1;
+    color : var(--point-color1)
+  }
+
+
+
+/* 티케팅 wrap */
+.ticketing_wrap{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem; 
+  grid-gap: 3rem;
+}
+
+.ticketing_wrap_left_area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+  .ticketing_wrap.selected{
+  }
+.depart_city, .arrive_city{
+  width: 100%;
+  border-bottom : 2px solid var(--border-color1);
+
+  position: relative;
+}
+.depart_city button, .arrive_city button{
+  width: 100%;
+  justify-content: space-between;
+  padding : 0.7rem 0.2rem;
+}
+.depart_city p, .arrive_city p{
+  opacity: .7;
+}
+
+#change_city{
+  width: 40px;
+  height: 40px;
+  border : 1px solid var(--border-color1);
+  border-radius: 50%;
+  margin : 0px 2.67rem;
+}
+#change_city i{
+  font-size: 2.3rem;
+  color : var(--light-text-color2);
+}
+  #change_city:hover{
+    background-color: rgba(255, 85, 6, 0.100);
+  }
+  #change_city:hover i{
+    color : var(--point-color1);
+  }
+
+
+/* 버튼 */
+.button_wrap{
+  display: flex;
+  margin: auto;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.ticketing_btn{
+  width: 11.33rem;
+  height: 4rem;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.ticketing_btn:hover{
+  opacity: 1;
+}
+.ticketing_btn.reset{
+  background-color: #000;
+  border-radius: 10px;
+  margin-right: 9.33rem;
+}
+.ticketing_btn.reset p{
+  color : white;
+}
+.ticketing_btn.search{
+  background-color: var(--point-color1);
+  border-radius: 10px;
+}
+.ticketing_btn.search p{
+  color : white;
+}
+
+
+/* 출발지 select 창 */
+.depart_city_button{
+}
+#depart_city_text, #arrive_city_text,
+#depart_city_text_inquiries, #arrive_city_text_inquiries{
+  color : #333;
+  opacity: 0.5;
+}
+#depart_city_text.selected, #arrive_city_text.selected,
+#depart_city_text_inquiries.selected, #arrive_city_text_inquiries.selected{
+  color : #333;
+  opacity: 0.7;
+  font-weight: bold;
+}
+.depart_city_select_wrap, .arrive_city_select_wrap{
+  background-color: #fff;
+  width: 350%;
+  height: 0px;
+  position: absolute;
+  left: 0;
+  top : 100%;
+  padding: 0rem;
+  z-index: 7;
+  overflow: hidden;
+  border: 0px solid var(--border-color1);
+}
+.arrive_city_select_wrap{
+  left: auto;
+  right: 0;
+  transform: translate(32.5%);
+}
+  .depart_city_select_wrap.active, .arrive_city_select_wrap.active{
+    height: 650px;
+    border: 1px solid var(--border-color1);
+  }
+
+.depart_city_select_name, .arrive_city_select_name{
+  padding: 1.67rem;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color1);
+}
+.depart_city_select_name p, 
+.arrive_city_select_name p{
+  color : var(--border-color2);
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 1.67rem;
+}
+.close_button{
+  width: 2rem;
+  height: 2rem;
+  padding-bottom: 1.67rem;
+}
+.close_button i{
+  font-size: 26px;
+}
+.continent_list_wrap{
+  padding: 1.67rem;
+  padding-top : 0px;
+}
+.continent_list_wrap ul{
+  display : flex;
+}
+.continent_list{
+  width: 18.7%;
+}
+.continent_list>a{
+  opacity: .5;
+  text-align: center;
+}
+.continent_list a{
+  display: block;
+  width: 100%;
+  padding : 1.5rem 0px;
+  font-size: var(--span-size);
+  font-weight: bold;
+  border-bottom: 2px solid var(--border-color1);
+
+  transition: 0.2s;
+}
+  .continent_list.selected a{
+    color : var(--point-color2);
+    border-bottom: 2px solid var(--point-color2);
+    opacity: 1;
+  }
+
+/* 지억 */
+.station_ul{
+  display: block !important;
+  border : 1px solid var(--border-color1);
+}
+  .continent_list.selected .station_ul p,
+  .continent_list.selected .station_ul span{
+    opacity: 1;
+  }
+.station_li{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding : 1rem 0px;
+}
+.station_li i{
+  opacity: 0;
+  color : var(--point-color1);
+  transition: .2s;
+}
+  .station_li:hover .station_name, 
+  .station_li:hover .station_initial,
+  .station_li:hover i{
+    color : var(--point-color1);
+    opacity: 1;
+  }
+
+  .station_li:hover .station_name, 
+  .station_li:hover .station_initial{
+    font-weight: 500;    
+  }
+.station_ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0px;
+  border: 0px;
+}
+.station_li a{
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0px;
+  border: 0px !important;
+  width: 100%;
+  justify-content: flex-start;
+}
+.station_li .xi-maker{
+}
+.station_li .station_name{
+  padding: 0px;
+  border: 0px;
+  font-size: var(--body-size);
+}
+.station_name{
+  margin: 0px 5px;
+  font-weight: 400;
+}
+.station_initial{
+  color : var(--light-text-color2);
+  font-weight: 400;
+  font-size: var(--body-size);
+}
+
+
+
+/* 모바일 탑승권 */
+.mobile_ticket_check_wrap .users_state{
+  height: 0;
+  overflow: hidden;  
+}
+.mobile_ticket_check_wrap .users_state.selected{
+  height: 100%;
+}
+.mobile_ticket_check_name{
+
+}
+.mobile_ticket_check_name point{
+  color : var(--point-color1);
+  font-weight: bold;
+}
+.mobile_ticket_check_name point2{
+  color : var(--point-color2);
+  font-weight: bold;
+}
+.mobile_ticket_check_contents{
+  margin : auto;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+
+}
+.qr_image{
+  height: 80%;
+}
+.mobile_ticket_check_contents_contents_wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5%;
+}
+.sub_wrap{
+  /* width: 25%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_wrap small{
+  font-size : var(--small-size);
+  color : #bbb;
+}
+.sub_wrap div{
+  width: fit-content;
+  text-align: center;
+  padding : 0px 1rem;
+  border : none;
+}
+#fight_icon{
+  font-size: 1.6rem;
+  color : rgba(255, 80, 0,0.5);
+  transform: rotate(90deg);
+}
+.sub_wrap .main_text{
+
+  color : #333;
+  opacity: 1;
+}
+.seat_on_wrap{
+
+}
+
+.mobile_ticket_swiper{
+  height: 100%;
+}
+
+.mobile_ticket_swiper .swiper-pagination{
+  left: auto !important;
+  right: 90%;
+  top: 40%;
+}
+.mobile_ticket_swiper .swiper-pagination-bullet{
+  background-color: var(--point-color2);
+  opacity: 0.5;
+  transition: 0.2s;
+  width: 5px;
+  height: 5px;
+}
+.mobile_ticket_swiper .swiper-pagination-bullet-active{
+  opacity: 1.0;
+  width: 8px;
+  border-radius: 50px;
+}
+.reservation_inquiry_wrap{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+}
+.reservation_number_wrap{
+}
+
+#reservation_number, .depart_day_select_datepicker.hasDatepicker{
+  padding-left: 1rem;
+}
+#reservation_number{
+  text-transform: uppercase;
+}
+.reservation_number_space,.depart_day_select_datepicker,#reservation_first_name, #reservation_second_name{
+  border : none;
+  border-bottom: 1px solid var(--border-color1);
+  height: 2.5rem;
+  font-size: var(--body-size);
+  padding : 10px 0rem;
+  opacity: 0.5;
+}
+.sub_notice i, .sub_notice{
+  font-size: var(--small-size);
+  color : #bbb;
+  margin-top : 0.2rem;
+}
+
+.depart_day_select_wrap{
+  margin-left: 4rem;
+}
+.reservation_datepicker_wrap{
+  position: relative;
+}
+.reservation_calendar{
+  position: absolute;
+  top: 1.25rem;
+  right : 45px;
+  transform: translate(0, -50%);
+  width: 1rem;
+  height: 1rem;
+}
+
+.ui-datepicker-calendar{
+  background-color: white;
+  box-shadow: none;
+}
+.ui-datepicker .ui-datepicker-prev{
+  left : 2rem;
+}
+.ui-datepicker .ui-datepicker-next{
+  right : 2rem;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-size: var(--span-size);
+  font-weight: 500;
+}
+.ui-state-default, .ui-widget-content td a{
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.ui-state-default, .ui-widget-content td a.ui-state-hover{
+  border: 1px solid var(--point-color1);
+}
+.ui-datepicker-month{
+  text-align: center;
+}
+.reservation_inquiry_wrap.reservation_name{
+  margin : 0px
+}
+#reservation_datepicker_notice_subtext{
+  margin-top : 2.5rem;
+  font-size: var(--body-size);
+  opacity: 0.5;
+}
+#reservation_first_name, #reservation_second_name{
+  width: 10rem;
+  margin-right: 2rem;
+  padding-left: 1rem;
+}
+.reservation_search_button_wrap{
+  margin-left : 4rem;
+}
+.reservation_search_btn{
+  width: 5.33rem;
+  height: 2rem;
+  background-color: var(--point-color1);
+  opacity: 1.0;
+}
+
+.reservation_search_btn.disabled{
+  opacity: 0.5;
+}
+.reservation_search_btn span{
+  color : white;
+}
+.users_state.not_logined{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.users_state.not_logined input.filled{
+  opacity: 1.0 !important;
+}
+
+
+
+
+/* 출도착 조회 */
+.departure_and_arrival_inquiries_wrap{
+  height: 0;
+  overflow: hidden;  
+}
+.departure_and_arrival_inquiries_wrap.selected{
+  overflow: visible;
+}
+.inquiries_notice_text_wrap{
+  /* padding :1rem 0px; */
+}
+.inquiries_notice_text{
+  /* font-size: var(--body-size); */
+  font-weight: 400;
+}
+.inquiries_notice_text point{
+  color : var(--point-color1);
+  font-weight: bold;
+}
+.inquiries_notice_text point2{
+  color : var(--point-color2);
+  font-weight: bold;
+}
+.inquiries_notice_radio_wrap{
+  margin-top : 1rem;
+  display: flex;
+  align-items: center;
+}
+.inquiries_notice_radio_wrap input{
+  padding-right: 0.5rem;
+}
+.inquiries_notice_radio_wrap input[type='radio']:checked{
+  accent-color: var(--point-color1);
+}
+.inquiries_notice_radio_wrap label{
+  padding-left: 0.5rem;
+}
+#flight_number{
+  margin-left : 1rem;
+}
+.depart_city_search, .arrive_city_search{
+  width: 21%;
+  border-bottom : 2px solid var(--border-color1);
+
+  position: relative;
+}
+
+.depart_city_select_wrap_search, .arrive_city_select_wrap_search{
+  background-color: #fff;
+  width: 350%;
+  height: 0px;
+  position: absolute;
+  left: 0;
+  top : 100%;
+  padding: 0rem;
+  z-index: 7;
+  overflow: hidden;
+  border: 0px solid var(--border-color1);
+}
+
+.depart_city_select_wrap_search.active, .arrive_city_select_wrap_search.active{
+  height: 650px;
+  border: 1px solid var(--border-color1);
+}
+
+.depart_city_search button, .arrive_city_search button{
+  width: 100%;
+  justify-content: space-between;
+  padding : 0.7rem 0.2rem;
+}
+.depart_city_search p, .arrive_city_search p{
+  opacity: .7;
+}
+
+#change_city_search{
+  width: 40px;
+  height: 40px;
+  border : 1px solid var(--border-color1);
+  border-radius: 50%;
+  margin : 0px 2.67rem;
+}
+
+#change_city_search i{
+  font-size: 2.3rem;
+  color : var(--light-text-color2);
+}
+  #change_city_search:hover{
+    background-color: rgba(255, 85, 6, 0.100);
+  }
+  #change_city_search:hover i{
+    color : var(--point-color1);
+  }
+
+#from_inquiries, #to_inquiries {
+  text-align: center;
+  border: none;
+  padding: 0.7rem 0rem;
+  padding-left: 2rem;
+  width: 45%;
+  font-size: var(--span-size);
+  font-weight: 400;
+  opacity: 0.3;
+}
+
+.departure_and_arrival_inquiries_wrap #from_inquiries.selected,
+.departure_and_arrival_inquiries_wrap #to_inquiries.selected{
+  opacity: 1.0;
+}
+
+.departure_and_arrival_inquiries_wrap .search_flight{
+  display: none;
+}
+.departure_and_arrival_inquiries_wrap .flight_station_search.selected{
+  display : block;
+}
+
+.flight_station_search .ticketing_wrap {
+  margin-top : 1rem;
+}
+
+.departure_and_arrival_inquiries_wrap .flight_number_search.selected{
+  margin-top : 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#flight_number.flight_number_space{
+  margin-left: 0px;
+}
+#flight_number, .flight_station_search_datepicker.hasDatepicker{
+  padding-left: 1rem;
+}
+#flight_number{
+  text-transform: uppercase;
+}
+
+.flight_number_space,.flight_station_search_datepicker{
+  border : none;
+  border-bottom: 1px solid var(--border-color1);
+  height: 2.5rem;
+  font-size: var(--body-size);
+  padding : 10px 0rem;
+  width: 20rem;
+  opacity: 0.5;
+}
+

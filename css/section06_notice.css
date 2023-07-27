@@ -1,0 +1,126 @@
+.section06_notice{
+  /* width: 100vw; */
+  width: 100%;
+  padding-top : 6.67rem;
+  /* margin-bottom : 4.67rem; */
+}
+
+.section06_inner{
+  position: relative;
+}
+
+.notice_luff{
+  position: absolute;
+  right: 0rem;
+  bottom: 0;
+  height: 85%;
+}
+.notice_wrap{
+  /* width: 70.5%; */
+  width: 100%;
+}
+.notice_wrap .section_sub_name{
+  padding-bottom : 0.67rem
+}
+.notice_wrap .section_text_wrap{
+  width: 70%;
+}
+.go_notice_home{
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  padding : 0.67rem 0px;
+
+  border-bottom : 2px solid var(--border-color1);
+  box-sizing: border-box;
+}
+.go_notice_home:hover{
+  border-bottom: 2px solid var(--point-color1);
+}
+
+.go_notice_home a,.go_notice_home a i{
+  color : var(--border-color2);
+}
+
+.notice_contents{
+  padding : 1.2rem 0rem 1.2rem 2.0rem;
+  position: relative;
+}
+  .notice_contents::before,
+  .notice_contents::after{
+    content: "";
+    position: absolute;
+    top: 0;
+
+
+    width: 0px;
+    height: 100%;
+    background-color: var(--point-color1);
+  }
+  .notice_contents::before{
+    left: 0;
+  }
+  .notice_contents::after{
+    right: 0;
+  }
+  .notice_contents:hover::before,
+  .notice_contents:hover::after{
+    width: 3px;
+  }
+.notice_contents_wrap{
+  margin-top : 2.8rem;
+  width: 70.5%;
+}
+
+.notice_contents{
+  position: relative;
+}
+.notice_contents a{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+}
+
+.notice_contents_name{
+  position: relative;
+}
+
+.notice_contents.important_notice .notice_contents_name::before{
+  position: absolute;
+  color : white;
+  text-align: center;
+  line-height: 1.2rem;
+  content : "중요";
+  width: 2.67rem;
+  height: 1.2rem;
+  background-color: var(--point-color1);
+  top: calc(0% - 1.2rem);
+  left : 0%;
+}
+
+.notice_contents_name p{
+  font-weight: 400;
+  display : block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice_contents_text{
+
+}
+.notice_contents_text p small{
+  color : #BBB;
+  font-weight: 300;
+}
+.go_notice_contents{
+  position: absolute;
+  right: 0;
+  top : 50%;
+  transform: translate(-50%, -50%);
+}
+
+.go_notice_contents a i{
+  font-size : var(--h3-size);
+}

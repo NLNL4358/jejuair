@@ -1,0 +1,44 @@
+@media screen and (max-width : 1280px) {
+  .live_contents_wrap ul{
+    flex-direction: column;
+  }
+  .live_contents_wrap .live_contents_list{
+    width: 90%;
+    margin : auto;
+    margin-bottom : 3.3rem;
+  }
+  .live_contents_wrap .live_contents_list:last-child{
+    margin-bottom : 0rem;
+  }
+  .jeju_live_text_name{
+    font-size: var(--h4-size);
+    font-weight: bold;
+  }
+  .jeju_live_text_detail{
+    font-size: var(--p-size);
+    font-weight: bold;
+  }
+  
+}
+@media screen and (max-width:960px) {
+  .jeju_live_text_name{
+    font-size: var(--h5-size);
+    font-weight: bold;
+  }
+  .jeju_live_text_detail{
+    font-size: var(--span-size);
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width:765px) {
+  .jeju_live_text_name{
+    font-size: var(--span-size);
+    font-weight: bold;
+  }
+  .jeju_live_text_detail{
+    font-size: var(--body-size);
+    font-weight: bold;
+  }
+
+}

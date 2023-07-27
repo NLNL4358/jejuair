@@ -1,0 +1,105 @@
+.section03_service{
+  padding : 7rem 0px;
+  overflow-x: clip;
+  /* width: 100vw; */
+  width: 100%;
+}
+.section03_inner{
+  /* position: relative; */
+}
+.section_text_wrap{
+  position: relative;
+  background-color: white;
+}
+.funservice_luff{
+  height: 23.33rem;
+  position: absolute;
+  top : -40%;
+  right : 0;
+  margin-left: 80%;
+}
+.section_name{
+  margin-bottom : 2rem;
+}
+
+.link_button{
+  margin-top : 2rem;
+  border: 1px solid var(--border-color2);
+  display : flex;
+  width: fit-content;
+  padding : 0.67rem 1.0rem;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+}
+  .link_button:before { 
+    content: ""; 
+    position: absolute; 
+    width: 260px; 
+    height: 260px; 
+    border-radius: 100px; 
+    background-color: var(--point-color1); 
+    top: 75px; 
+    left: 50%; 
+    transform: translate(-50%); 
+    animation: wave 5s infinite linear; 
+    transition: all 1s; 
+  } 
+  .link_button:hover{
+    border: 1px solid var(--border-color1);
+  }
+  .link_button:hover:before { top: 10px; } 
+  @keyframes wave {
+    0% { transform: translate(-50%) rotate(-180deg); }
+    100% { transform: translate(-50%) rotate(360deg); } 
+  } 
+
+.link_button p{
+  z-index: 3;
+  transition: 1s;
+}
+
+.link_button:hover p{
+  color : white;
+}
+
+.link_button p i{
+  z-index: 3;
+  transition: 1s;
+}
+
+.link_button:hover p i{
+  color : white;
+}
+
+.service_img_wrap{
+  width: 80%;
+  margin: auto;
+  margin-top : 3.33rem;
+  position: relative; 
+}
+.service_img_wrap_overflow{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.25);
+
+}
+
+.service_img{
+  width: 100%;
+}
+.service_wrap_ribbon{
+  position: absolute;
+  /* right: -14px; */
+  /* top: -14px; */
+  right: -0.9%;
+  top: -1.6%;
+  width: 20.7%;
+}

@@ -1,0 +1,305 @@
+@media screen and (max-width : 1280px) {
+  .section02_inner{
+    width: 90%;
+  }
+  .ticketing_wrap{
+    flex-direction: column;
+    grid-gap: 3rem;
+  }
+  .ticketing_wrap_left_area{
+  }
+  .ticketing_calender{
+    margin : auto;
+    width: 100%;
+  }
+  .quick_menu_contents.selected{
+    height: 420px;
+  }
+  .users_state .logined{
+    text-align: center;
+  }
+  .sub_wrap{
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom : 0.7rem;
+  }
+  .sub_wrap:last-child{
+    margin-bottom : 0px;
+  }
+
+  .sub_wrap .main_text{
+    font-size: var(--span-size);
+  }
+  
+  .swiper-pagination{
+  }
+
+  .departure_and_arrival_inquiries_wrap .flight_number_search.selected{
+    justify-content: space-around;
+  }
+  .sub_notice i, .sub_notice{
+  }
+
+  .depart_city_select_wrap, .arrive_city_select_wrap {
+    width: 200%;
+  }
+  .continent_list_wrap ul{
+    justify-content: space-between;
+  }
+  .arrive_city_select_wrap{
+    right: 0;
+    left: auto;
+    transform: translate(0%);
+  }
+
+  .mobile_ticket_check_contents{
+    padding: 0px;
+  }
+  .qr_image{
+    width: 30%;
+    height: auto;
+  }
+
+
+  
+  #ui-datepicker-div{
+    top: 50% !important; 
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 70% !important;
+    padding : 5% 0.7rem;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+  }
+
+  
+}
+
+@media screen and (max-width:960px) {
+  .depart_city_select_wrap, .arrive_city_select_wrap {
+    width: 236.27%;
+  }
+  .quick_nav{
+    width: 60%;
+    height: 20%;
+  }
+  .station_li a{
+    justify-content: center;
+  }
+
+  .station_li .station_initial{
+    display: none;
+  }
+  #change_city{
+    width: 2rem;
+    height: 2rem;
+  }
+  #change_city i{
+    font-size: 1.7rem;
+  }
+  .ticketing_type_wrap p{
+    font-size: var(--span-size);
+  }
+  #depart_city_text, #arrive_city_text,#depart_city_text_inquiries, #arrive_city_text_inquiries{
+    font-size: var(--span-size);
+  }
+
+  #ui-datepicker-div{
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width:765px) {
+  .section02_inner{
+    width: 100%;
+  }
+  .ticketing_wrap{
+    grid-gap: 2rem;
+  }
+  .quick_menu_contents.selected{
+    height: 26rem;
+  }
+  .depart_city_select_wrap, .arrive_city_select_wrap {
+    width: 200%;
+  }
+  .continent_list_wrap{
+    position: relative;
+    padding : 0px;
+    padding-bottom : 1.67rem;
+  }
+  .station_ul{
+    width: 0%;
+    overflow: hidden;
+    position: absolute;
+  }
+  .continent_list.selected .station_ul{
+    width: 100%;
+    right: 0%;
+    top : 0%;
+    margin-top : 68px;
+  }
+  .quick_nav{
+    width: 100%;
+    height: 18%;
+  }
+  .quick_menu {
+    width: 100%;
+  }
+  .ticketing_btn.reset{
+    display: none;
+  }
+  .ticketing_btn.search{
+    width: 90%;
+    height: 3.5rem;
+  } 
+
+  .quick_menu_name{
+    font-size: var(--span-size);
+  }
+  .station_li .station_name{
+    /* font-size: var(--small-size); */
+  }
+  .mobile_ticket_check_name p, .inquiries_notice_text{
+    font-size : var(--span-size);
+  }
+  .mobile_ticket_check_name span{
+    font-size: var(--body-size);
+  }
+  .reservation_inquiry_wrap.reservation_number{
+    flex-direction: column;
+    align-items : flex-start;
+    justify-content: center;
+    margin : 4rem 0px;
+  }
+  .depart_day_select_wrap{
+    margin-top : 0.5rem;
+    margin-left: 0px;
+  }
+  #change_city {
+    margin : 0px 1.5rem;
+  }
+  .sub_wrap.reservation_wrap div{
+    width: 100%;
+  }
+  #reservation_datepicker_notice_subtext{
+    margin-top : 0rem;
+  }
+
+  .mobile_ticket_check_contents_contents_wrap .main_text{
+    font-size: var(--body-size);
+  }
+  #ui-datepicker-div{
+    width: 90% !important;
+  }
+
+
+  .search_flight.flight_number_search{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .flight_number_wrap,.depart_day_select_wrap{
+    width: 100%;
+  }
+  .depart_day_select_wrap{
+    margin-top: 1rem;
+  }
+  .reservation_calendar{
+    right: auto;
+    left : 18rem;
+  }
+}
+
+@media screen and (max-width:608px) {
+  
+  .quick_nav{
+    /* width: 80%; */
+    height: 15%;
+  }
+  .continent_list {
+    width: 25%;
+  }
+  .continent_list a{
+    border-bottom : 2px solid transparent;
+    font-size : var(--body-size);
+  }
+  .continent_list.selected .station_ul{
+    left: 0%;
+    margin: 0px;
+    width: 75%;
+    margin-left: auto;
+  }
+  .quick_menu_contents.selected{
+    padding : 2rem;
+  }
+  .quick_menu_img{
+    /* width: 1.2rem;
+    height: 1.2rem; */
+  }
+  .quick_menu_name{
+    /* font-size: var(--small-size); */
+  }
+  .button_wrap {
+    justify-content: space-around;
+  }
+
+  .ticketing_type_wrap ul{
+    justify-content: center;
+  }
+  .ticketing_type_wrap p{
+    font-size: var(--body-size);
+  }
+  .ticketing_btn.reset {
+    margin : 0px;
+  }
+  .continent_list_wrap ul{
+    flex-direction: column;
+  }
+  .mobile_ticket_check_name p, .inquiries_notice_text{
+    font-size : var(--body-size);
+  }
+  .mobile_ticket_check_name span{
+    font-size: var(--small-size);
+  }
+  #reservation_first_name,#reservation_second_name{
+    width: 45%;
+    margin-right : 0px;
+  }
+  .reservation_search_button_wrap{
+    margin-left : 2rem;
+  }
+  .mobile_ticket_check_contents_contents_wrap {
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+  #ui-datepicker-div{
+    /* width: 100% !important; */
+  }
+}
+@media screen and (max-width:520px) {
+  .ui-state-default, .ui-widget-content td a{
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+@media screen and (max-width:430px) {
+  .quick_menu_img{
+    display: none;
+  }
+  .quick_menu_name{
+    margin-left : 0px;
+  }
+  .button_wrap{
+    /* margin-top : 1.5rem; */
+  }
+  #change_city {
+    margin : 0px 1rem;
+  }
+  .button_wrap p{
+    font-size : var(--span-size);
+  }
+  .ticketing_btn{
+    height: 3.5rem;
+  }
+  .depart_city_select_wrap, .arrive_city_select_wrap {
+    width: 260%;
+  }
+}

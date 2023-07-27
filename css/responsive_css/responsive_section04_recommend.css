@@ -1,0 +1,32 @@
+@media screen and (max-width : 1280px) {
+  .swiper_wrap{
+    width: 100%;
+  }
+
+  .recommendSwiper{
+  }
+  .swiper-button-prev{
+    margin-left: 1rem;
+  }
+  .swiper-button-next{
+    margin-right: 1rem;
+  }
+  .recommend_img.focus_left,.recommend_img.focus_center,.recommend_img.focus_right{
+    
+    right: 0%;
+    left:auto;
+  }
+ 
+}
+@media screen and (max-width:1024px) {
+  .swiper-button-prev, .swiper-button-next{
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media screen and (max-width:960px) {
+  .section04_inner .link_button {
+    position: relative;
+  }
+
+}

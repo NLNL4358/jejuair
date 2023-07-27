@@ -1,0 +1,163 @@
+.section01_main{
+  /* width: 100vw; */
+  width: 100%;
+  /* height: 600px; */
+}
+
+.section01_inner{
+  height: 100%;
+}
+
+.swiper.banner_swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.banner_swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner_swiper .swiper-slide img {
+  display: flex;
+  height: 100%;
+}
+
+
+.banner_swiper .swiper-pagination{
+  bottom : 18%;
+  left : 0%;
+  display: flex;
+  margin-left: 12.5%;
+}
+.section01_main .swiper-pagination-bullet{
+  background-color: #fff;
+  opacity: 0.5;
+  transition: 0.2s;
+  width: 5px;
+  height: 5px;
+}
+.section01_main .swiper-pagination-bullet-active{
+  opacity: 1.0;
+  width: 12px;
+  border-radius: 50px;
+}
+
+.swiper-slide a{
+  margin-left : auto;
+  width: var(--inner-size);
+  height: 100%;
+}
+
+
+/* banner_text */
+.banner_text{
+  position: absolute;
+  left: 0;
+  top : 50%;
+  z-index: 2;
+  transform: translate(0%, -50%);
+  margin-left : 12.5%;
+}
+
+.banner_text h2,
+.banner_text h3{
+  color : white;
+  text-align: left;
+  line-height: 4rem;
+
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.banner_text h3{
+  line-height: 6rem;
+}
+.go_detail{
+  padding-top : 2rem;
+  display: flex;
+  align-items: center;
+}
+.go_detail h4
+,.go_detail i{
+  color : white;
+}
+.go_detail i{
+  font-size: var(--h4-size);
+}
+
+
+
+/* main */
+.banner_main{
+  /* 이게 맞나.. */
+  position: relative;
+  width: 100%;
+  right: 0%;
+  top: 0%;
+  margin-left : auto;
+
+}
+
+
+/* background */
+.banner_background{
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  left: 0%;
+  top: 0%;
+}
+.banner_background.back1{
+  filter: invert(42%) sepia(100%) saturate(5339%) hue-rotate(1deg) brightness(102%) contrast(106%);
+}
+.banner_background.back2{
+  filter : invert(52%) sepia(94%) saturate(326%) hue-rotate(179deg) brightness(102%) contrast(101%);
+}
+.banner_background.back3{
+  filter: invert(70%) sepia(170%) saturate(5365%) hue-rotate(235deg) brightness(104%) contrast(119%);
+}
+.banner_background.back4{
+  filter: invert(46%) sepia(13%) saturate(1854%) hue-rotate(212deg) brightness(90%) contrast(85%);
+}
+.banner_background.back5{
+  filter: invert(42%) sepia(100%) saturate(5339%) hue-rotate(1deg) brightness(102%) contrast(106%);
+}
+.banner_background.back6{
+  filter: invert(60%) sepia(101%) saturate(568%) hue-rotate(238deg) brightness(83%) contrast(100%);
+}
+.banner_background.back7{
+  filter: invert(36%) sepia(52%) saturate(1178%) hue-rotate(179deg) brightness(93%) contrast(88%);
+}
+.banner_background.back8{
+  filter : invert(47%) sepia(48%) saturate(5145%) hue-rotate(350deg) brightness(97%) contrast(101%);
+}
+.banner_background.back9{
+  filter: invert(42%) sepia(100%) saturate(5339%) hue-rotate(1deg) brightness(102%) contrast(106%);
+}
+.banner_background.back10{
+  filter: invert(26%) sepia(20%) saturate(1487%) hue-rotate(46deg) brightness(49%) contrast(84%);
+}
+.banner_background.back11{
+  filter: invert(53%) sepia(7%) saturate(1733%) hue-rotate(358deg) brightness(105%) contrast(93%);
+}
+.banner_background.back12{
+  filter: invert(70%) sepia(97%) saturate(7491%) hue-rotate(1deg) brightness(100%) contrast(110%);
+}
+.banner_background.back13{
+  filter: invert(75%) sepia(12%) saturate(5741%) hue-rotate(217deg) brightness(94%) contrast(93%);
+}
+
+
+
+
+
+

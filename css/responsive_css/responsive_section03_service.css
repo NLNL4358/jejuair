@@ -1,0 +1,29 @@
+@media screen and (max-width: 1280px) {
+  .section03_service{
+    padding-top : 10rem;
+  }
+  .section_text_wrap{
+    padding-bottom : 3.3rem;
+    position: relative;
+  }
+  .service_img_wrap{
+    width: 90%;
+    margin-top : 4.6rem;
+  }
+  .funservice_luff{
+    height: 100%;
+    top : auto;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .funservice_luff{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:765px) {
+
+}

@@ -1,0 +1,2673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주항공 리뉴얼</title>
+
+  <!-- jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="js/Datepicker/datepickeroptional.js"></script>
+
+  <!-- xi-icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/section01_main.css">
+  <link rel="stylesheet" href="css/section02_ticketing.css">
+  <link rel="stylesheet" href="css/section02_sub/section02_calender.css">
+  <link rel="stylesheet" href="css/section03_service.css">
+  <link rel="stylesheet" href="css/section04_recommend.css">
+  <link rel="stylesheet" href="css/section05_additional_service.css">
+  <link rel="stylesheet" href="css/section06_notice.css">
+  <link rel="stylesheet" href="css/section07_jejulive.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/back_airplane.css">
+
+  <!-- 반응형 CSS -->
+  <link rel="stylesheet" href="css/responsive_css/responsive_reset.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_header.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section01_main.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section02_ticketing.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section03_service.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section04_recommend.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section05_additional_service.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section06_notice.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_section07_jejulive.css">
+  <link rel="stylesheet" href="css/responsive_css/responsive_footer.css">
+  <!-- <link rel="stylesheet" href="css/responsive_css/responsive_back_airplane.css"> -->
+</head>
+<body>
+  <header class="header">
+    <div class="inner header_inner">
+      <div class="header_util">
+        <select name="targetUser" id="targetUser" class="targetUserSelect">
+          <option value="개인" selected > <a href="#none">개인</a></option>
+          <option value="여행사"> <a href="#none">여행사</a></option>
+          <option value="Cargo"> <a href="#none">Cargo</a></option>
+        </select>
+        <ul>
+          <li class="header_util_list"> <a href="#none" class="login_btn" data-login="visitor">
+            <i class="xi-user-o"></i>로그인
+          </a> </li>
+          <li class="header_util_list"> <a href="#none" class="my_booking">
+            <i class="xi-bookmark-o"></i>나의 예약 현황
+          </a> </li>
+          <li class="header_util_list select_language"> 
+            <i class="xi-globus"></i>
+            <select name="language" id="language" class="lagnuageSelectBar" >
+              <option value="language"selected>Language</option>
+              <option value="KOR">한글</option>
+              <option value="ENG">English</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="header_main">
+        <a href="#none" class="main_logo">
+          <img src="img/logo.png" alt="제주항공" class="main_logo_img color">
+          <img src="img/logoWhite.png" alt="제주항공" class="main_logo_img white">
+        </a>
+        <ul class="gnb">
+          <li class="gnb_list"><span> <a href="#none">예약</a> </span></li>
+          <li class="gnb_list"><span> <a href="#none">여행준비 안내</a> </span></li>
+          <li class="gnb_list"><span> <a href="#none">서비스 및 혜택</a> </span></li>
+          <li class="gnb_list"><span> <a href="#none">이벤트</a> </span></li>
+          <li class="gnb_list"><span> <a href="#none">고객센터</a> </span></li>
+
+          <div class="gnb_hover_bar"></div>
+        </ul>
+        <ul class="rnb">
+          <li class="rnb_list">
+            <a href="#none"><img src="img/icon/mypage_icon.png" alt=""></a>
+          </li>
+          <li class="rnb_list search_button">
+            <a href="#none"><img src="img/icon/search_icon.png" alt=""></a>
+          </li>
+          <div class="modal modal_search_bar">
+            <p class="modal_arrow"></p>
+            <div class="search_bar_wrap">
+              <input type="text"placeholder="검색어를 입력하세요" class="search_bar">
+              <button class="search_bar_search_button
+              ">검색</button>
+              <button class="search_bar_close_button"><i class="xi-close"></i></button>
+            </div>
+          </div>
+        </ul>
+        <button class="mobile_hamburger">
+          <img src="img/icon/hamburgerWhite_icon.png" alt="" class="mobile_hamburger_img">
+        </button>
+      </div>
+    </div>
+
+    <div class="header_sub">
+      <div class="inner snb_inner">
+        <div class="sub_nav reservation" data-height="3">
+          <ul class="lnb">
+            <li class="lnb_list">
+              <a href="#"> <span>항공권 예매 </span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 항공권 예매 </a></li>
+                <li class="snb_list"> <a href="#none"> 국제선 운임 </a></li>
+                <li class="snb_list"> <a href="#none"> 국내선 운임 </a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>예약 조회</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 예약 조회 </a></li>
+                <li class="snb_list"> <a href="#none"> 나의 예약 현황</a></li>
+                <li class="snb_list"> <a href="#none"> 모바일 탑승권</a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>운항 정보</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 스케쥴 조회</a></li>
+                <li class="snb_list"> <a href="#none"> 출도착 조회 </a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>민항공후급증예약</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 민항공후급증예약 </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sub_nav travel_preparation" data-height="6">
+          <ul class="lnb">
+            <li class="lnb_list">
+              <a href="#"> <span>수하물</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 수하물 안내 </a></li>
+                <li class="snb_list"> <a href="#none"> 사전 수하물 </a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>빠른 수속</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 빠른 수속 </a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>제주 공항 정보</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 공항 정보</a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>도움이 필요한 고객</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 반려동물 동반 고객 </a></li>
+                <li class="snb_list"> <a href="#none"> 유아동반 고객 </a></li>
+                <li class="snb_list"> <a href="#none"> 혼자 여행하는 어린이 </a></li>
+                <li class="snb_list"> <a href="#none"> 휠체어 이용고객 </a></li>
+                <li class="snb_list"> <a href="#none"> 임산부 고객 </a></li>
+                <li class="snb_list"> <a href="#none"> 의사소견서 필요 고객 </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sub_nav service" data-height="7">
+          <ul class="lnb">
+            <li class="lnb_list">
+              <a href="#"> <span>기내 서비스 안내</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 에어카페 </a></li>
+                <li class="snb_list"> <a href="#none"> 기내 FUN서비스</a></li>
+                <li class="snb_list"> <a href="#none"> 출입국신고서 작성범</a></li>
+                <li class="snb_list"> <a href="#none"> 국내선 기내면세품</a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>부가 서비스 안내</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 부가서비스 소개</a></li>
+                <li class="snb_list"> <a href="#none"> 사전 기내식</a></li>
+                <li class="snb_list"> <a href="#none"> 여행자 보험</a></li>
+                <li class="snb_list"> <a href="#none"> 부가서비스 번들</a></li>
+                <li class="snb_list"> <a href="#none"> 나중에 결제</a></li>
+                <li class="snb_list"> <a href="#none"> 자전거 키링백 서비스</a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>회원 혜택 안내</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none">신규 회원 혜택</a></li>
+                <li class="snb_list"> <a href="#none">프로모션 코드</a></li>
+                <li class="snb_list"> <a href="#none">리프레시 포인트</a></li>
+                <li class="snb_list"> <a href="#none">포인트 조회 & 구매</a></li>
+                <li class="snb_list"> <a href="#none">기프티켓</a></li>
+                <li class="snb_list"> <a href="#none">쿠폰 등록</a></li>
+                <li class="snb_list"> <a href="#none">결제 혜택</a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>프리미엄 혜택 안내</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 비지니스 라이트 </a></li>
+                <li class="snb_list"> <a href="#none"> 스포츠 멤버십
+                  </a></li>
+                <li class="snb_list"> <a href="#none"> 골프 멤버십
+                  </a></li>
+                <li class="snb_list"> <a href="#none"> 제휴 서비스
+                  </a></li>
+                <li class="snb_list"> <a href="#none"> 온라인몰 제어샵
+                  </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sub_nav event" data-height="2">
+          <ul class="lnb">
+            <li class="lnb_list">
+              <a href="#"> <span>이벤트</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 진행중인 이벤트 </a></li>
+                <li class="snb_list"> <a href="#none"> 지난 이벤트 </a></li>
+              </ul>
+            </li>
+            <li class="lnb_list">
+              <a href="#"> <span>승무원 체험 교육</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 에듀윙 안내</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sub_nav customer_service_center" data-height="3">
+          <ul class="lnb">
+            <li class="lnb_list">
+              <a href="#"> <span>고객센터</span> </a>
+              <ul class="snb">
+                <li class="snb_list"> <a href="#none"> 고객센터 </a></li>
+                <li class="snb_list"> <a href="#none"> 기내 유실물 센터 </a></li>
+                <li class="snb_list"> <a href="#none"> 공지사항 </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mobile_nav_wrap"> <!-- 반응형 햄버거 메뉴 -->
+        <div class="mobile_nav_util">
+          <div class="mobile_util_left">
+            <div class="language_wrap">
+              <i class="xi-globus"></i>
+              <select name="language" id="language" class="languageSelectBar" >
+                <option value="language"selected>Language</option>
+                <option value="KOR">한글</option>
+                <option value="ENG">English</option>
+              </select>
+            </div>
+          </div>
+          <div class="mobile_util_center">
+            <a href="#none" class="mobile_nav_header_logo_wrap"><img src="img/logo.png" alt="로고" class="mobile_nav_header_logo"></a>
+          </div>
+          <div class="mobile_util_right">
+            <div class="store_button_wrap">
+              <div class="play_store_button_wrap">
+                <a href="#none">
+                  <img src="img/icon/googlePlayStore.png" alt="">
+                  <span>PlayStore</span>
+                </a>
+              </div>
+              <div class="app_store_button_wrap">
+                <a href="#none">
+                  <img src="img/icon/AppleStore.png" alt="">
+                  <span>AppStore</span>
+                </a>
+              </div>
+            </div>
+            <div class="close_button_wrap">
+              <button>
+                <img src="img/icon/xButton.webp" alt="" class="close_button_img">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mobile_nav_top">
+          <div class="mobile_nav_button_wrap">
+            <div class="sign_up_button_wrap">
+              <button>회원가입</button>
+            </div>
+            <div class="sign_in_button_wrap">
+              <button>로그인</button>
+            </div>
+          </div>
+
+          <ul class="mobile_rnb">
+            <li class="rnb_list">
+              <a href="#none"><img src="img/icon/mypage_icon.png" alt=""></a>
+            </li>
+            <li class="rnb_list mobile_search_button">
+              <a href="#none"><img src="img/icon/search_icon.png" alt=""></a>
+            </li>
+            <div class="modal mobile_modal_search_bar">
+              <p class="modal_arrow"></p>
+              <div class="search_bar_wrap">
+                <input type="text"placeholder="검색어를 입력하세요" class="search_bar">
+                <button class="search_bar_search_button
+                ">검색</button>
+                <button class="mobile_search_bar_close_button"><i class="xi-close"></i></button>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div class="mobile_nav_main">
+          <div class="mobile_gnb"> <!-- width : 30% -->
+            <ul class="mobile_gnb_ul">
+              <li class="mobile_gnb_li selected"> <p>예약</p> </li>
+              <li class="mobile_gnb_li"> <p>여행준비 안내</p> </li>
+              <li class="mobile_gnb_li"> <p>서비스 및 혜택</p> </li>
+              <li class="mobile_gnb_li"> <p>이벤트</p> </li>
+              <li class="mobile_gnb_li"> <p>고객센터</p> </li>
+            </ul>
+          </div>
+          <div class="mobile_snb"> <!-- width : 70% -->
+            <div class="mobile_snb_list_wrap selected">
+              <ul class="mobile_snb_contents_wrap">
+                <li class="mobile_snb_contents">
+                  <span>항공권 예매</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 항공권 예매 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 국내선 운임 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 국제선 운임 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>예약 조회</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 예약 조회 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 나의 예약 현황 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 모바일 탑승권 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>운항 정보</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 스케쥴 조회 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 출도착 조회 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>민항공후급증 예약</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none">민항공후급증 예약 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_snb_list_wrap">
+              <ul class="mobile_snb_contents_wrap">
+                <li class="mobile_snb_contents">
+                  <span>수하물</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 수하물 안내 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 사전 수하물 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>빠른 수속</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 빠른 수속 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>공항 정보</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 공항 정보 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>도움이 필요한 고객</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none">반려동물 동반 고객<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">유아 동반 고객<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">혼자 여행하는 어린이<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">휠체어 이용 고객<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">임산부 고객<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">의사 소견서 필요 고객<i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_snb_list_wrap">
+              <ul class="mobile_snb_contents_wrap">
+                <li class="mobile_snb_contents">
+                  <span>기내 서비스 안내</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 에어 카페 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 기내 FUN 서비스 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 출입국 신고서 작성방법 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 국내선 기내면세품 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>부가서비스 안내</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 부가서비스 소개 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 사전 기내식 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 여행자 보험 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 부가서비스 번들 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 나중에 결제 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 자전거 캐링백 서비스 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>회원 혜택 안내/span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 신규회원 혜택 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 프로모션 코드 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 리프레시 포인트 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 포인트 구매 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 포인트 조회 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 기프티켓 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 쿠폰 등록 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 결제 혜택 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>프리미엄 혜택 안내</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none">비지니스 라이트<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">스포츠 멤버십<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">골프 멤버십<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">제휴 서비스<i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none">온라인 제이샵<i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_snb_list_wrap">
+              <ul class="mobile_snb_contents_wrap">
+                <li class="mobile_snb_contents">
+                  <span>이벤트</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 진행중인 이벤트 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 지난 이벤트 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+                <li class="mobile_snb_contents">
+                  <span>객실 승무원 체험 교육</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 에듀윙 안내 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_snb_list_wrap">
+              <ul class="mobile_snb_contents_wrap">
+                <li class="mobile_snb_contents">
+                  <span>고객센터</span>
+                  <ul class="mobile_snb_contents_ul">
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 고객센터 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 기내 유실물 센터 <i class="xi-angle-right"></i></a></li>
+                    <li class="mobile_snb_contents_li"> <a href="#none"> 공지사항 <i class="xi-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </header>
+  <section class="section01_main">
+      <div class="swiper banner_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>국제선 34개, 국내선6노선</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>얼리버드 찜</h2>
+                    <h2>최대 87% 할인</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_01.png"
+              class="banner_main main1">
+              <img src="img/main_background_white.png" alt="" class="banner_background back1">
+              
+          </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>후쿠오카 여름여행!</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>제주항공 특가</h2>
+                    <h2>편도총액 62,600원</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>특가 보러가기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_02.png"
+              class="banner_main main2">
+              <img src="img/main_background_white.png" alt="" class="banner_background back2">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>환상의 여름휴양지!</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>코타키나발루</h2>
+                    <h2>올 여름 이벤트 특가</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_03.png"
+              class="banner_main main3">
+              <img src="img/main_background_white.png" alt="" class="banner_background back3">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>부산-몽골 신규 특가</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>신비의 대지 몽골</h2>
+                    <h2>편도 총액 10만원대</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_04.png"
+              class="banner_main main4">
+              <img src="img/main_background_white.png" alt="" class="banner_background back4">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>Have a nice trip 2023</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>With 제주항공</h2>
+                    <h2>7월 고객 감사 이벤트</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_05.png"
+              class="banner_main main5">
+              <img src="img/main_background_white.png" alt="" class="banner_background back5">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>2023 BTS FESTA</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>With 제주항공</h2>
+                    <h2>10주년 감사 콜라보</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_06.png"
+              class="banner_main main6">
+              <img src="img/main_background_white.png" alt="" class="banner_background back6">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>신들의 휴양지,</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>대자연의 산림</h2>
+                    <h2>인천-팔라우 직항오픈</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_07.png"
+              class="banner_main main7">
+              <img src="img/main_background_white.png" alt="" class="banner_background back7">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>항공+기사 포함</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>여행갈때 한번에</h2>
+                    <h2>렌터카 예약까지!</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_08.png"
+              class="banner_main main8">
+              <img src="img/main_background_white.png" alt="" class="banner_background back8">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>신규회원을 위한 선물</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>제주항공 특가혜택</h2>
+                    <h2>운임 최대 7%할인</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>혜택 확인하기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_09.png"
+              class="banner_main main9">
+              <img src="img/main_background_white.png" alt="" class="banner_background back9">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>골프러도 제주항공</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>합리적인 골프여행</h2>
+                    <h2>골프멤버십 신규 오픈!</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>멤버십 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_10.png"
+              class="banner_main main10">
+              <img src="img/main_background_white.png" alt="" class="banner_background back10">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>탈때마다 적립 되요</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>항공운임 5% 기본 적립</h2>
+                    <h2>리프레시 포인트</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>리프레시 포인트 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_11.png"
+              class="banner_main main11">
+              <img src="img/main_background_white.png" alt="" class="banner_background back11">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>제주도 여행엔 제주항공!</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>제주항공에서</h2>
+                    <h2>렌터카 한번에 예약</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_12.png"
+              class="banner_main main12">
+              <img src="img/main_background_white.png" alt="" class="banner_background back12">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+                <div class="banner_text">
+                  <div class="slide_sub_name">
+                    <h3>여행도 안심!</h3>
+                  </div>
+                  <div class="slide_main_name">
+                    <h2>여행자 보험 가입하고</h2>
+                    <h2>안전하게 여행 가요</h2>
+                  </div>
+                  <div class="go_detail">
+                    <h4>자세히 보기</h4> 
+                    <i class="xi-angle-right-min"></i>
+                  </div>
+                </div>
+              <img src="img/banner_image/banner_image_13.png"
+              class="banner_main main13">
+              <img src="img/main_background_white.png" alt="" class="banner_background back13">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  </section>
+  <section class="section02_ticketing">
+    <div class="inner section02_inner">
+      <!-- 항공권 예약, 모바일 탑승권, 출도착 조회 -->
+      <div class="quick_nav">
+        <div class="quick_menu ticketing_reservation">
+          <div class="quick_menu_img"></div>
+          <span class="quick_menu_name">항공권 예약</span>
+        </div>
+        <div class="quick_menu mobile_ticket_check">
+          <div class="quick_menu_img"></div>
+          <span class="quick_menu_name">모바일 탑승권</span>
+        </div>
+        <div class="quick_menu departure_and_arrival_inquiries ">
+          <div class="quick_menu_img"></div>
+          <span class="quick_menu_name">출도착 조회</span>
+        </div>
+      </div>
+      <div class="quick_menu_wrap">
+        <div class="quick_menu_contents ticketingSelect_wrap">
+          <!-- 왕복, 편도, 다구간 -->
+          <div class="ticketing_type_wrap">
+            <ul>
+              <li class="ticketing_type round_trip"> <a href="#none"><p>왕복</p></a> </li>
+              <li class="ticketing_type one_way"> <a href="#none"><p>편도</p></a> </li>
+              <li class="ticketing_type multi_city"> <a href="#none"><p>다구간</p></a> </li>
+            </ul>
+          </div>
+          <!-- 출발지, 도착지, 캘린더 -->
+          <div class="ticketing_wrap round_trip">
+            <div class="ticketing_wrap_left_area">
+              <div class="depart_city">
+                <button class="depart_city_button">
+                  <p id="depart_city_text">출발지</p>
+                  <img src="img/icon/departPlaneIcon_color.png" alt="">
+                </button>
+                <div class="depart_city_select_wrap">
+                  <div class="depart_city_select_name">
+                    <p>출발지 선택</p>
+                    <a href="#none" class="close_button"><i class="xi-close"></i></a>
+                  </div>
+                  <div class="continent_list_wrap">
+                    <ul>
+                      <li class="continent_list selected">
+                        <a href="#none">대한민국</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="서울(인천)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(인천)</p>
+                              <span class="station_initial">ICN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="서울(김포)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(김포)</p>
+                              <span class="station_initial">GMP</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="부산">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">부산</p>
+                              <span class="station_initial">PUS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="제주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">제주</p>
+                              <span class="station_initial">CJU</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="광주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">광주</p>
+                              <span class="station_initial">KWJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="청주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">청주</p>
+                              <span class="station_initial">CJJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="대구">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">대구</p>
+                              <span class="station_initial">TAE</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동북 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="도쿄(나리타)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">도쿄(나리타)</p>
+                              <span class="station_initial">NRT</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오사카(간사이)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오사카(간사이)</p>
+                              <span class="station_initial">KIX</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="후쿠오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">후쿠오카</p>
+                              <span class="station_initial">FUK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나고야">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나고야</p>
+                              <span class="station_initial">NGO</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="삿포로">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">삿포로</p>
+                              <span class="station_initial">CTS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오키나와">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오키나와</p>
+                              <span class="station_initial">OKA</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="미쓰야마">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">미쓰야마</p>
+                              <span class="station_initial">MYJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="시즈오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">시즈오카</p>
+                              <span class="station_initial">FSZ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오이타">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오이타</p>
+                              <span class="station_initial">OIT</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동남 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="하노이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">하노이</p>
+                              <span class="station_initial">HAN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="호찌민">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">호찌민</p>
+                              <span class="station_initial">SGN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="다낭">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">다낭</p>
+                              <span class="station_initial">DAD</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나트랑/냐짱">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나트랑/냐짱</p>
+                              <span class="station_initial">CXR</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="푸꾸옥">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">푸꾸옥</p>
+                              <span class="station_initial">PQS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="방콕">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">방콕</p>
+                              <span class="station_initial">BKK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="치앙마이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">치앙마이</p>
+                              <span class="station_initial">CNK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="마닐라">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">마닐라</p>
+                              <span class="station_initial">MNL</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="세부">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">세부</p>
+                              <span class="station_initial">CEB</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">러시아/몽골</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="울란바타르">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">울란바타르</p>
+                              <span class="station_initial">UBN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">괌/사이판</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="괌">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">괌</p>
+                              <span class="station_initial">GUM</span>
+                            </a>
+                          </li><li class="station_li" data-stationName="사이판">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">사이판</p>
+                              <span class="station_initial">SPN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button id="change_city">
+                <i class="xi-compare-arrows"></i>
+              </button>
+              <div class="arrive_city">
+                <button class="arrive_city_button">
+                  <img src="img/icon/arivePlaneIcon_color.png" alt="">
+                  <p id="arrive_city_text">도착지</p>
+                </button>
+                <div class="arrive_city_select_wrap">
+                  <div class="arrive_city_select_name">
+                    <p>도착지 선택</p>
+                    <a href="#none" class="close_button"><i class="xi-close"></i></a>
+                  </div>
+                  <div class="continent_list_wrap">
+                    <ul>
+                      <li class="continent_list selected">
+                        <a href="#none">대한민국</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="서울(인천)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(인천)</p>
+                              <span class="station_initial">ICN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="서울(김포)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(김포)</p>
+                              <span class="station_initial">GMP</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="부산">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">부산</p>
+                              <span class="station_initial">PUS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="제주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">제주</p>
+                              <span class="station_initial">CJU</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="광주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">광주</p>
+                              <span class="station_initial">KWJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="청주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">청주</p>
+                              <span class="station_initial">CJJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="대구">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">대구</p>
+                              <span class="station_initial">TAE</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동북 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="도쿄(나리타)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">도쿄(나리타)</p>
+                              <span class="station_initial">NRT</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오사카(간사이)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오사카(간사이)</p>
+                              <span class="station_initial">KIX</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="후쿠오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">후쿠오카</p>
+                              <span class="station_initial">FUK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나고야">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나고야</p>
+                              <span class="station_initial">NGO</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="삿포로">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">삿포로</p>
+                              <span class="station_initial">CTS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오키나와">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오키나와</p>
+                              <span class="station_initial">OKA</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="미쓰야마">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">미쓰야마</p>
+                              <span class="station_initial">MYJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="시즈오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">시즈오카</p>
+                              <span class="station_initial">FSZ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오이타">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오이타</p>
+                              <span class="station_initial">OIT</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동남 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="하노이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">하노이</p>
+                              <span class="station_initial">HAN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="호찌민">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">호찌민</p>
+                              <span class="station_initial">SGN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="다낭">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">다낭</p>
+                              <span class="station_initial">DAD</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나트랑/냐짱">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나트랑/냐짱</p>
+                              <span class="station_initial">CXR</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="푸꾸옥">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">푸꾸옥</p>
+                              <span class="station_initial">PQS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="방콕">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">방콕</p>
+                              <span class="station_initial">BKK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="치앙마이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">치앙마이</p>
+                              <span class="station_initial">CNK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="마닐라">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">마닐라</p>
+                              <span class="station_initial">MNL</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="세부">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">세부</p>
+                              <span class="station_initial">CEB</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">러시아/몽골</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="울란바타르">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">울란바타르</p>
+                              <span class="station_initial">UBN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">괌/사이판</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="괌">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">괌</p>
+                              <span class="station_initial">GUM</span>
+                            </a>
+                          </li><li class="station_li" data-stationName="사이판">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">사이판</p>
+                              <span class="station_initial">SPN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 캘린더 -->
+            <div class="ticketing_calender">
+              <label for="from" class="from_text"></label>
+              <input type="text" id="from" name="from" value="가는 날" autocomplete="off">
+              <p>~</p>
+              <label for="to" class="to_text"></label>
+              <input type="text" id="to" name="to" value="오는 날" autocomplete="off">
+            </div>
+          </div>
+          <!-- 버튼 -->
+          <div class="button_wrap">
+            <button class="ticketing_btn reset">
+              <p>초기화</p>
+            </button>
+            <button class="ticketing_btn search">
+              <p>항공권 검색</p>
+            </button>
+          </div>
+        </div>
+        <div class="quick_menu_contents mobile_ticket_check_wrap">
+          <div class="users_state logined">
+            <div class="mobile_ticket_check_name"> <!-- 로그인일때는 selected, QR보여줌 -->
+              <p><point>QR</point>코드를 이용하여 <point2>체크인</point2> 하실 수 있습니다.</p>
+              <span><point>HONG GIL DONG</point>님의 모바일 탑승권은 총 <point2>3</point2>매 입니다.</span>
+            </div>
+            <div class="swiper mobile_ticket_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="mobile_ticket_check_contents">
+                    <img src="img/QR.png" alt="" class="qr_image">
+                    <div class="mobile_ticket_check_contents_contents_wrap">
+                      <div class="sub_wrap city_from_to_wrap">
+                        <div class="depart_city">
+                          <span><small>출발지/from</small></span>
+                          <div class="depart_city_box">
+                            <p class="main_text">JEJU</p>
+                          </div>
+                        </div>
+                        <i class="xi-airplane" id="fight_icon"></i>
+                        <div class="arrive_city">
+                          <span><small>도착지/to</small></span>
+                          <div class="depart_city_box">
+                            <p class="main_text">SEOUL</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="sub_wrap reservation_wrap">
+                        <div class="reservation_num">
+                          <span><small>예약번호</small></span>
+                          <p class="main_text">GR22N</p>
+                        </div>
+                        <div class="boarding_time">
+                          <span><small>출발시간</small></span>
+                          <p class="main_text">2023.07.19 - 08:40</p>
+                        </div>
+                      </div>
+                      <div class="sub_wrap seat_on_wrap">
+                        <div class="flight_name">
+                          <span><small>편행</small></span>
+                          <p class="main_text">7C1550</p>
+                        </div>
+                        <div class="seat_num">
+                          <span><small>좌석</small></span>
+                          <p class="main_text">6D</p>
+                        </div>
+                        <div class="passenger_name">
+                          <span><small>이름</small></span>
+                          <p class="main_text">HONG GIL DONG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="mobile_ticket_check_contents">
+                  <img src="img/QR.png" alt="" class="qr_image">
+                  <div class="mobile_ticket_check_contents_contents_wrap">
+                    <div class="sub_wrap city_from_to_wrap">
+                      <div class="depart_city">
+                        <span><small>출발지/from</small></span>
+                        <div class="depart_city_box">
+                          <p class="main_text">JAPAN</p>
+                        </div>
+                      </div>
+                      <i class="xi-airplane" id="fight_icon"></i>
+                      <div class="arrive_city">
+                        <span><small>도착지/to</small></span>
+                        <div class="depart_city_box">
+                          <p class="main_text">HAWAI</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="sub_wrap reservation_wrap">
+                      <div class="reservation_num">
+                        <span><small>예약번호</small></span>
+                        <p class="main_text">GR22N</p>
+                      </div>
+                      <div class="boarding_time">
+                        <span><small>출발시간</small></span>
+                        <p class="main_text">2023.07.19 - 08:40</p>
+                      </div>
+                    </div>
+                    <div class="sub_wrap seat_on_wrap">
+                      <div class="flight_name">
+                        <span><small>편행</small></span>
+                        <p class="main_text">7C1550</p>
+                      </div>
+                      <div class="seat_num">
+                        <span><small>좌석</small></span>
+                        <p class="main_text">6D</p>
+                      </div>
+                      <div class="passenger_name">
+                        <span><small>이름</small></span>
+                        <p class="main_text">HONG GIL DONG</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="mobile_ticket_check_contents">
+                  <img src="img/QR.png" alt="" class="qr_image">
+                  <div class="mobile_ticket_check_contents_contents_wrap">
+                    <div class="sub_wrap city_from_to_wrap">
+                      <div class="depart_city">
+                        <span><small>출발지/from</small></span>
+                        <div class="depart_city_box">
+                          <p class="main_text"></p>
+                        </div>
+                      </div>
+                      <i class="xi-airplane" id="fight_icon"></i>
+                      <div class="arrive_city">
+                        <span><small>도착지/to</small></span>
+                        <div class="depart_city_box">
+                          <p class="main_text">SEOUL</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="sub_wrap reservation_wrap">
+                      <div class="reservation_num">
+                        <span><small>예약번호</small></span>
+                        <p class="main_text">GR22N</p>
+                      </div>
+                      <div class="boarding_time">
+                        <span><small>출발시간</small></span>
+                        <p class="main_text">2023.07.19 - 08:40</p>
+                      </div>
+                    </div>
+                    <div class="sub_wrap seat_on_wrap">
+                      <div class="flight_name">
+                        <span><small>편행</small></span>
+                        <p class="main_text">7C1550</p>
+                      </div>
+                      <div class="seat_num">
+                        <span><small>좌석</small></span>
+                        <p class="main_text">6D</p>
+                      </div>
+                      <div class="passenger_name">
+                        <span><small>이름</small></span>
+                        <p class="main_text">HONG GIL DONG</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            
+            
+          </div>
+          <div class="users_state not_logined"> 
+            <div class="mobile_ticket_check_name"><!-- 로그인 아닐때 selected, 예약번호로 조회 -->
+              <p><point>비회원</point> 고객님 <point2>예약번호</point2>를 조회하여 탑승권을 조회하세요.</p>
+              <span>예약 번호를 포함한 정보를 입력하여 조회가 가능합니다.</span>
+            </div>
+            <div class="reservation_inquiry_wrap reservation_number">
+              <div class="reservation_number_wrap">
+                <label for="reservation_number" class="reservation_number">
+                  <input type="text" id="reservation_number" class="reservation_number_space" maxlength="5" placeholder="예약 번호 입력">
+                  <p class="sub_notice"><i class="xi-info-o">여행사, 공항, 고객센터, 비회원 예약도 조회할 수 있어요</i></p>
+                </label>
+              </div>
+              <div class="depart_day_select_wrap">
+                <div class="reservation_datepicker_wrap">
+                  <label for="reservation_datepicker">
+                    <img src="img/icon/calendar_icon.png" alt="" class="reservation_calendar">
+                    <input type="text" id="datepicker" placeholder="탑승 날자" class="depart_day_select_datepicker">
+                    <p class="sub_notice"> <i class="xi-caret-up-min"></i>클릭하여 탑승하시는 날자를 입력해주세요</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <p id="reservation_datepicker_notice_subtext">예약 시 입력한 한글 또는 영문의 탑승객명을 입력해 주세요 예) HONG GIL-DONG</p>
+            <div class="reservation_inquiry_wrap reservation_name">
+              <label for="reservation_first_name">
+                <input type="text" id="reservation_first_name" class="reservation_first_name_space" placeholder="성">
+                <input type="text" id="reservation_second_name" class="reservation_second_name_space" placeholder="이름">
+              </label>
+              <div class="reservation_search_button_wrap">
+                <button class="reservation_search_btn disabled">
+                  <span>조회</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quick_menu_contents departure_and_arrival_inquiries_wrap">
+
+          <div class="inquiries_notice_text_wrap">
+            <p class="inquiries_notice_text">탑승일과 함께 <point>구간</point> 또는 <point2>편명</point2>을 입력하시면 조회할 수 있습니다.</p>
+            <p class="inquiries_notice_text"><small>출도착 시간은 현지시간 기준입니다. (+1은 다음날)</small></p>
+          </div>
+
+          <div class="inquiries_notice_radio_wrap">
+            <input type="radio" id="flight_station" name="flight_search" checked="checked">
+            <label for="flight_station">구간 조회</label>
+            <input type="radio" id="flight_number" name="flight_search">
+            <label for="flight_number">편명 조회</label>
+          </div>
+          
+          <div class="search_flight flight_station_search"> <!-- radio에 따라 selected -->
+            <div class="ticketing_wrap round_trip">
+            <div class="ticketing_wrap_left_area">
+              <div class="depart_city">
+                <button class="depart_city_button">
+                  <p id="depart_city_text_inquiries">출발지</p>
+                  <img src="img/icon/departPlaneIcon_color.png" alt="">
+                </button>
+                <div class="depart_city_select_wrap">
+                  <div class="depart_city_select_name">
+                    <p>출발지 선택</p>
+                    <a href="#none" class="close_button"><i class="xi-close"></i></a>
+                  </div>
+                  <div class="continent_list_wrap">
+                    <ul>
+                      <li class="continent_list selected">
+                        <a href="#none">대한민국</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="서울(인천)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(인천)</p>
+                              <span class="station_initial">ICN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="서울(김포)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(김포)</p>
+                              <span class="station_initial">GMP</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="부산">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">부산</p>
+                              <span class="station_initial">PUS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="제주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">제주</p>
+                              <span class="station_initial">CJU</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="광주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">광주</p>
+                              <span class="station_initial">KWJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="청주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">청주</p>
+                              <span class="station_initial">CJJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="대구">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">대구</p>
+                              <span class="station_initial">TAE</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동북 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="도쿄(나리타)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">도쿄(나리타)</p>
+                              <span class="station_initial">NRT</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오사카(간사이)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오사카(간사이)</p>
+                              <span class="station_initial">KIX</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="후쿠오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">후쿠오카</p>
+                              <span class="station_initial">FUK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나고야">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나고야</p>
+                              <span class="station_initial">NGO</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="삿포로">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">삿포로</p>
+                              <span class="station_initial">CTS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오키나와">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오키나와</p>
+                              <span class="station_initial">OKA</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="미쓰야마">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">미쓰야마</p>
+                              <span class="station_initial">MYJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="시즈오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">시즈오카</p>
+                              <span class="station_initial">FSZ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오이타">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오이타</p>
+                              <span class="station_initial">OIT</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동남 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="하노이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">하노이</p>
+                              <span class="station_initial">HAN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="호찌민">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">호찌민</p>
+                              <span class="station_initial">SGN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="다낭">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">다낭</p>
+                              <span class="station_initial">DAD</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나트랑/냐짱">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나트랑/냐짱</p>
+                              <span class="station_initial">CXR</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="푸꾸옥">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">푸꾸옥</p>
+                              <span class="station_initial">PQS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="방콕">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">방콕</p>
+                              <span class="station_initial">BKK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="치앙마이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">치앙마이</p>
+                              <span class="station_initial">CNK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="마닐라">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">마닐라</p>
+                              <span class="station_initial">MNL</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="세부">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">세부</p>
+                              <span class="station_initial">CEB</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">러시아/몽골</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="울란바타르">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">울란바타르</p>
+                              <span class="station_initial">UBN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">괌/사이판</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="괌">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">괌</p>
+                              <span class="station_initial">GUM</span>
+                            </a>
+                          </li><li class="station_li" data-stationName="사이판">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">사이판</p>
+                              <span class="station_initial">SPN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button id="change_city">
+                <i class="xi-compare-arrows"></i>
+              </button>
+              <div class="arrive_city">
+                <button class="arrive_city_button">
+                  <img src="img/icon/arivePlaneIcon_color.png" alt="">
+                  <p id="arrive_city_text_inquiries">도착지</p>
+                </button>
+                <div class="arrive_city_select_wrap">
+                  <div class="arrive_city_select_name">
+                    <p>도착지 선택</p>
+                    <a href="#none" class="close_button"><i class="xi-close"></i></a>
+                  </div>
+                  <div class="continent_list_wrap">
+                    <ul>
+                      <li class="continent_list selected">
+                        <a href="#none">대한민국</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="서울(인천)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(인천)</p>
+                              <span class="station_initial">ICN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="서울(김포)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">서울(김포)</p>
+                              <span class="station_initial">GMP</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="부산">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">부산</p>
+                              <span class="station_initial">PUS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="제주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">제주</p>
+                              <span class="station_initial">CJU</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="광주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">광주</p>
+                              <span class="station_initial">KWJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="청주">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">청주</p>
+                              <span class="station_initial">CJJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="대구">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">대구</p>
+                              <span class="station_initial">TAE</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동북 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="도쿄(나리타)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">도쿄(나리타)</p>
+                              <span class="station_initial">NRT</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오사카(간사이)">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오사카(간사이)</p>
+                              <span class="station_initial">KIX</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="후쿠오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">후쿠오카</p>
+                              <span class="station_initial">FUK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나고야">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나고야</p>
+                              <span class="station_initial">NGO</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="삿포로">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">삿포로</p>
+                              <span class="station_initial">CTS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오키나와">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오키나와</p>
+                              <span class="station_initial">OKA</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="미쓰야마">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">미쓰야마</p>
+                              <span class="station_initial">MYJ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="시즈오카">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">시즈오카</p>
+                              <span class="station_initial">FSZ</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="오이타">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">오이타</p>
+                              <span class="station_initial">OIT</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">동남 아시아</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="하노이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">하노이</p>
+                              <span class="station_initial">HAN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="호찌민">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">호찌민</p>
+                              <span class="station_initial">SGN</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="다낭">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">다낭</p>
+                              <span class="station_initial">DAD</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="나트랑/냐짱">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">나트랑/냐짱</p>
+                              <span class="station_initial">CXR</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="푸꾸옥">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">푸꾸옥</p>
+                              <span class="station_initial">PQS</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="방콕">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">방콕</p>
+                              <span class="station_initial">BKK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="치앙마이">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">치앙마이</p>
+                              <span class="station_initial">CNK</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="마닐라">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">마닐라</p>
+                              <span class="station_initial">MNL</span>
+                            </a>
+                          </li>
+                          <li class="station_li" data-stationName="세부">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">세부</p>
+                              <span class="station_initial">CEB</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">러시아/몽골</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="울란바타르">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">울란바타르</p>
+                              <span class="station_initial">UBN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="continent_list">
+                        <a href="#none">괌/사이판</a>
+                        <ul class="station_ul">
+                          <li class="station_li" data-stationName="괌">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">괌</p>
+                              <span class="station_initial">GUM</span>
+                            </a>
+                          </li><li class="station_li" data-stationName="사이판">
+                            <a href="#none">
+                              <i class="xi-maker"></i>
+                              <p class="station_name">사이판</p>
+                              <span class="station_initial">SPN</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 캘린더 -->
+            <div class="ticketing_calender">
+              <label for="from" class="from_text"></label>
+              <input type="text" id="from_inquiries" name="from" value="가는 날">
+              <p>~</p>
+              <label for="to" class="to_text"></label>
+              <input type="text" id="to_inquiries" name="to" value="오는 날">
+            </div>
+          </div>
+          </div>
+          <div class="search_flight flight_number_search"> 
+            <div class="flight_number_wrap ">
+              <label for="flight_number" class="flight_number">
+                <input type="text" id="flight_number" class="flight_number_space" maxlength="6" placeholder="제주항공의 편명은 '7C'로 시작됩니다.">
+                <p class="sub_notice"><i class="xi-info-o">편명은 '7C'를 포함한 5~6 자리의 숫자로 입력해주세요.</i></p>
+              </label>
+            </div>
+
+            <div class="depart_day_select_wrap">
+              <div class="reservation_datepicker_wrap">
+                <label for="reservation_datepicker">
+                  <img src="img/icon/calendar_icon.png" alt="" class="reservation_calendar">
+                  <input type="text" id="flight_station_search_datepicker" placeholder="탑승 날자" class="flight_station_search_datepicker">
+                  <p class="sub_notice"> <i class="xi-caret-up-min"></i>클릭하여 탑승하시는 날자를 입력해주세요</p>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="button_wrap">
+            <button class="ticketing_btn reset">
+              <p>초기화</p>
+            </button>
+            <button class="ticketing_btn search">
+              <p>항공권 검색</p>
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  <section class="section03_service">
+    <div class="inner section03_inner">
+      <div class="section_text_wrap">
+        <h2 class="section_name" data-aos="fade-up"
+        data-aos-duration="1000"  data-aos-once="true">기내 FUN 서비스🎉</h2>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1100" data-aos-once="true">당신의 여행이 <point>더욱 가치있도록</point> 제주항공이 추억을 선물해 드립니다.</p>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1200" data-aos-once="true">프로포즈 부터 하늘라디오, 타로카드 등  다양한 <point2>이벤트</point2>를 만나보세요</p>
+        <div class="link_button" data-aos="fade-up"
+        data-aos-duration="1300" data-aos-once="true">
+          <p>신청하기<i class="xi-angle-right"></i></p> </div>
+        <img src="img/luff/luffy3.webp" alt="스튜어디스 루피" class="funservice_luff" data-aos="fade-up"data-aos-duration="1300"data-aos-easing="ease-in-sine" data-aos-once="true" loading="lazy">
+      </div>
+    </div>
+    <div class="service_img_wrap" >
+      <div class="service_img_wrap_overflow"data-aos="fade-up"
+      data-aos-duration="1700" data-aos-once="true">
+        <img src="img/event_image/propose.webp" class="service_img" alt="프로포즈" loading="lazy">
+        <img src="img/event_image/radio.webp" class="service_img" alt="라디오"loading="lazy">
+        <img src="img/event_image/tarot.webp" class="service_img" alt="타로" loading="lazy">
+        <img src="img/event_image/magic.webp" class="service_img" alt="마술" loading="lazy">
+        <img src="img/event_image/balloon.webp" class="service_img" alt="풍선아트" loading="lazy">
+        <img src="img/event_image/Calligraphy.webp" class="service_img" alt="캘라그래피" loading="lazy">
+        <img src="img/event_image/beauti.webp" class="service_img" alt="뷰티" loading="lazy">
+        <img src="img/event_image/game.webp" class="service_img" alt="게임" loading="lazy">
+      </div>
+      <img src="img/event_image/ribbon.png" class="service_wrap_ribbon" alt="" data-aos="fade-up"
+      data-aos-duration="1700" data-aos-once="true" loading="lazy">
+    </div>
+  </section>
+  <section class="section04_recommend">
+    <div class="inner section04_inner">
+      <div class="section_text_wrap">
+        <h2 class="section_name" data-aos="fade-up"
+        data-aos-duration="1000"  data-aos-once="true">추천 항공권🛫</h2>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1100" data-aos-once="true"><point>여행을 떠나고 싶은 당신</point>에게 제주항공이 추천합니다.</p>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1200" data-aos-once="true"><point2>인기있는 항공권</point2>들을 한눈에 확인해보세요</p>
+        <div class="link_button" data-aos="fade-up"
+        data-aos-duration="1300" data-aos-once="true">
+          <p>전체보기<i class="xi-plus-min"></i></p> 
+        </div>
+      </div>
+    </div>
+    <div class="swiper_wrap">
+      <div class="swiper recommendSwiper" data-aos="fade-up"
+      data-aos-duration="1500" data-aos-once="true">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 방콕(수완나품)</p>
+                </div>
+                <div class="recommend_type">
+                  <span>편도총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>138,400</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/bangkok.jpg" alt="방콕">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 로스앤젤레스</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>1,321,600</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/busan.jpg" alt="로스앤젤레스">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(김포) - 호치민</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>427,700</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/hochimin.jpg" alt="호치민">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 사이판</p>
+                </div>
+                <div class="recommend_type">
+                  <span>편도총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>374,300</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_right" src="img/recommend/saifan.jpg" alt="사이판">
+            </a>
+        </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(김포) - 호놀룰루</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>1,026,100</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img" src="img/recommend/honollullu.jpg" alt="호놀룰루">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 프랑크푸르트</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>1,147,200</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img" src="img/recommend/frankfurt.jpg" alt="프랑크푸르트">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 로마(다빈치)</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>1,203,700</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/roma.webp" alt="로마">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(김포) - 삿포로</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>435,800</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/satporo.webp" alt="삿포로">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 델리</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>520,300</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img" src="img/recommend/delli.jpg" alt="델리">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 제주도</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>51,800</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_right" src="img/recommend/jeju02.jpg" alt="제주">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#none">
+              <div class="slide_text_wrap">
+                <div class="recommend_name">
+                  <p>서울(인천) - 마닐라</p>
+                </div>
+                <div class="recommend_type">
+                  <span>왕복총액</span>
+                </div>
+                <div class="how_much">
+                  <p>KRW <b>458,300</b> 부터</p>
+                </div>
+              </div>
+              <img class="recommend_img focus_center" src="img/recommend/manilla.jpg" alt="마닐라">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev">
+        <h4><i class="xi-angle-left"></i></h4>
+      </div>
+      <div class="swiper-button-next">
+        <h4><i class="xi-angle-right"></i></h4>
+      </div>
+    </div>
+  </section>
+<!--   <div class="gap_wrap">
+    <img class= "gap_image" src="img/gapImage.jpg" alt="중간 갭 이미지" loading="lazy">
+  </div> -->
+  <section class="gap_section">
+    <div class="fixed_wrap">
+      <div class="gap_img_wrap">
+        <img src="img/back_airplan//YouCanFly.png" alt="" class="gap_text_img">
+        <img src="img/back_airplan/cloud_back.png" alt="" class="cloud_back">
+        <img src="img/back_airplan/cloud_first.png" alt="" class="png_cloud cloud_first">
+        <img src="img/back_airplan/plane_wing.png" alt="" class="plane_wing">
+        <img src="img/back_airplan/cloud_second.png" alt="" class="png_cloud cloud_second">
+        <img src="img/back_airplan/cloud_third.png" alt="" class="png_cloud cloud_third">
+      </div>
+    </div>
+  </section>
+  
+  <section class="section05_additional_service">
+    <div class="inner section05_inner">
+      <div class="section_text_wrap">
+        <h2 class="section_name" data-aos="fade-up"
+        data-aos-duration="1000"  data-aos-once="true">부가 서비스👐</h2>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1000" data-aos-once="true">여행의 도움이되는 <point>부가서비스</point>와 함께 <point2>편안한 여행</point2>되세요.</p>
+        <div class="link_button" data-aos="fade-up"
+        data-aos-duration="1000" data-aos-once="true">
+          <p>전체 보기<i class="xi-plus-min"></i></p> </div>
+        <img src="img/luff/luffy2.png" alt="휴양지 루피" class="additional_service_luff" data-aos="fade-up" data-aos-duration="1000"data-aos-offset = "-500"data-aos-easing="ease-in-sine" data-aos-once="true" loading="lazy">
+      </div>
+
+      <div class="additional_service_wrap" data-aos="fade-up"
+      data-aos-duration="1400" data-aos-once="true" >
+        <div class="additional_service_contents" >
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/bundle.png" alt="" class="contents_img gray">
+              <img src="img/service/bundle-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">부가서비스 번들</p>
+            <span class="contents_text"><small>묶음으로 구매하여<br>최대 61% 할인을 누리세요</small></span>
+          </a>
+        </div>
+        <div class="additional_service_contents" >
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/baggage2.png" alt="" class="contents_img gray">
+              <img src="img/service/baggage2-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">사전 수하물</p>
+            <span class="contents_text"><small>짐이 많아도<br>걱정하지 마세요</small></span>
+          </a>
+        </div>
+        <div class="additional_service_contents" >
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/sit.png" alt="" class="contents_img gray">
+              <img src="img/service/sit-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">좌석 구매</p>
+            <span class="contents_text"><small>선호하는 좌석을<br>미리 예약해 보세요</small></span>
+          </a>
+        </div>
+        <div class="additional_service_contents" >
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/food.png" alt="" class="contents_img gray">
+              <img src="img/service/food-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">사전 기내식</p>
+            <span class="contents_text"><small>하늘 위에서<br>특별한 식사 즐겨보세요</small></span>
+          </a>
+        </div>
+        <div class="additional_service_contents">
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/rentcar.png" alt="" class="contents_img gray">
+              <img src="img/service/rentcar-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">제주 렌트카</p>
+            <span class="contents_text"><small>제주항공 회원은<br>최대 86% 우대할인</small></span>
+          </a>
+        </div>
+        <div class="additional_service_contents">
+          <a href="#none">
+            <div class="contents_img_wrap">
+              <img src="img/service/wifi.png" alt="" class="contents_img gray">
+              <img src="img/service/wifi-color.png" alt="" class="contents_img color">
+            </div>
+            <p class="contents_name">포켓 와이파이</p>
+            <span class="contents_text"><small>해외여행 인터넷<br>데이터 걱정없이 사용해요</small></span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <section class="section06_notice">
+    <div class="inner section06_inner">
+      <img src="img/luff/luff4.png" alt="공지사항루피" class="notice_luff" data-aos="fade-up"data-aos-duration="1000"data-aos-easing="ease-in-sine" data-aos-once="true" loading="lazy">
+      <div class="notice_wrap">
+        <div class="section_text_wrap">
+          <h2 class="section_name" data-aos="fade-up"
+          data-aos-duration="1100"  data-aos-once="true">공지사항🔊</h2>
+          <p class="section_sub_name" data-aos="fade-up"
+          data-aos-duration="1100" data-aos-once="true"><point>제주항공</point>의 <point2>새로운 소식</point2>들을 전해드립니다.</p>
+          <p class="go_notice_home" data-aos="fade-up"
+          data-aos-duration="1100" data-aos-once="true"><small> <a href="#none">자세히 보기 <i class="xi-angle-right"></i> </a> </small></p>
+        </div>
+
+        <div class="notice_contents_wrap" data-aos="fade-up"
+        data-aos-duration="1100" data-aos-once="true">
+          <div class="notice_contents important_notice">
+            <a href="#none">
+              <div class="notice_contents_name">
+                <p>코로나 바이러스 각 국가 입출국 제한안내 (2023년 05월 12일 기준)</p>
+              </div>
+              <div class="notice_contents_text">
+                <p><small>2023.05.12</small></p>
+              </div>
+              <div class="go_notice_contents">
+                <a href="#none"><i class="xi-angle-right-min"></i></a>
+              </div>
+            </a>
+          </div>
+          <div class="notice_contents">
+            <a href="#none">
+              <div class="notice_contents_name">
+                <p>4가지 맛 베트남 프로모션 이벤트 당첨자 발표의 건</p>
+              </div>
+              <div class="notice_contents_text">
+                <p><small>2023.06.21</small></p>
+              </div>
+              <div class="go_notice_contents">
+                <a href="#none"><i class="xi-angle-right-min"></i></a>
+              </div>
+            </a>
+          </div>
+          <div class="notice_contents">
+            <a href="#none">
+              <div class="notice_contents_name">
+                <p>골프 멤버십 할인 요금 변경 안내</p>
+              </div>
+              <div class="notice_contents_text">
+                <p><small>2023.06.27</small></p>
+              </div>
+              <div class="go_notice_contents">
+                <a href="#none"><i class="xi-angle-right-min"></i></a>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section07_live">
+    <div class="inner section07_inner">
+      <div class="section_text_wrap">
+        <h2 class="section_name" data-aos="fade-up"
+        data-aos-duration="1100"  data-aos-once="true">제주항공 Live📺</h2>
+        <p class="section_sub_name" data-aos="fade-up"
+        data-aos-duration="1100" data-aos-once="true"><ooint>제주항공</ooint>의 소식을 <point2>유튜브</point2>로 만나보세요</p>
+      </div>
+      <div class="live_contents_wrap">
+        <ul>
+          <li class="live_contents_list"
+          data-aos="fade-up"
+          data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">
+            <a href="#none">
+              <div class="live_video_wrap">
+                <div class="image_box">
+                  <img class="jeju_live_main_img" src="img/jejulive/thumbnail01.jpg" alt="" loading="lazy">
+                  <img class="play_img" src="img/jejulive/icon_play.svg" alt="">
+                </div>
+              </div>
+              <div class="live_text_wrap">
+                <p class="jeju_live_text_name">알고보니 나도 파워J? <point>JJIM형들</point> 모여라!</p>
+                <span class="jeju_live_text_detail">제주항공 얼리버드 찜특가 <point2>최대 87%</point2> 할인 !</span>
+              </div>
+            </a>
+          </li>
+          <li class="live_contents_list" data-aos="fade-up"
+          data-aos-duration="1100" data-aos-once="true" data-aos-delay="200">
+            <a href="#none">
+              <div class="live_video_wrap">
+                <div class="image_box">
+                  <img class="jeju_live_main_img" src="img/jejulive/thumbnail02.jpg" alt="" loading="lazy">
+                  <img class="play_img" src="img/jejulive/icon_play.svg" alt="">
+                </div>
+              </div>
+              <div class="live_text_wrap">
+                <p class="jeju_live_text_name">🍊감귤랭가이드 제주항공 <point>승무원</point> 추천! 서울 축제 즐기기 ...</p>
+                <span class="jeju_live_text_detail">서울 축제 즐기기 <point2>SEOUL FESTA 2023</point2></span>
+              </div>
+            </a>
+          </li>
+          <li class="live_contents_list" data-aos="fade-up"
+          data-aos-duration="1100" data-aos-once="true" data-aos-delay="300">
+            <a href="#none">
+              <div class="live_video_wrap">
+                <div class="image_box">
+                  <img class="jeju_live_main_img" src="img/jejulive/thumbnail03.jpg" alt="" loading="lazy">
+                  <img class="play_img" src="img/jejulive/icon_play.svg" alt="">
+                </div>
+              </div>
+              <div class="live_text_wrap">
+                <p class="jeju_live_text_name">승무원을 꿈군다면 <point>에듀윙!</point>😎</p>
+                <span class="jeju_live_text_detail">실제같은 <point2>리얼 프로그램</point2> 제주항공 에듀윙</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer_top">
+      <div class="inner footer_inner">
+        <ul class="footer_top_ul">
+          <li class="footer_top_list"> <a href="#none">
+            회사소개
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            ESG경영
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            여객운송약관
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            투자정보
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            홈페이지 이용약관
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            채용안내
+          </a></li>
+          <li class="footer_top_list"> <a href="#none">
+            개인정보 처리방침
+          </a></li>
+          <li class="footer_top_list site_map"> 
+            <div class="family-list">
+              <ul>
+                <li>Family Site <i class="xi-caret-down"></i> </li>
+                <li><a href="#none">㈜애경산업</a></li>
+                <li><a href="#none">㈜에이텍 </a></li>
+                <li><a href="#none">애경S.T </a></li>
+                <li><a href="#none">에이케이아이에스㈜ </a></li>
+                <li><a href="#none">애드미션 </a></li>
+                <li><a href="#none">네오팜 </a></li>
+                <li><a href="#none">애경유화㈜ </a></li>
+                <li><a href="#none">애경화학㈜ </a></li>
+                <li><a href="#none">에이케이켐텍 </a></li>
+                <li><a href="#none">코스파 </a></li>
+                <li><a href="#none">AK PLAZA </a></li>
+                <li><a href="#none">AK홀딩스 </a></li>
+                <li><a href="#none">애경개발 </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_main">
+      <div class="inner footer_inner">
+        <div class="img_wrap">
+          <img src="img/luff/YouCanFly.png" alt="여행을 떠나는 루피" class="footer_luff">
+        </div>
+        <div class="text_wrap">
+          <div class="footer_text_left">
+            <div class="footer_text_divide_wrap">
+              <span> <a href="#none">고객센터 바로가기 </a> </span>
+              <span>상담 시간 1599-1500 (09:00~19:00)</span>
+            </div>
+            <div class="footer_text_divide_wrap">
+              <span>브랜드 협업, 미디어 노출, 제휴 프로모션 등 제안을 기다립니다.</span>
+              <span>제안별로 담당자 검토 후 제휴가 진행됩니다.</span>
+            </div>
+            <div class="footer_text_divide_wrap">
+              <span>마케팅 제휴 e-mail : partnership@jejuair.net</span>
+            </div>
+          </div>
+          <div class="footer_text_right">
+            <div class="sns_wrap">
+              <p>SNS</p>
+              <div class="sns_icon_wrap">
+                <a href="#none" class="icon_sprite_img">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+                </a>
+                <a href="#none" class="icon_sprite_img">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+                </a>
+                <a href="#none" class="icon_sprite_img">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+                </a>
+                <a href="#none" class="icon_sprite_img">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+                  <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+                </a>
+              </div>
+            </div>
+            <div class="footer_text_divide_wrap">
+              <span>(주)제주항공 사업자등록번호 : 616-81-50527 대표이사 : 김이배<br>제주특별자치도 제주시 신대로 64(연동, 건설공제회관 3층)</span>
+              <span>Copyright &#169; JEJUAIR. All Rights Reserved.</span>
+
+            </div>
+          </div>
+        </div>
+        <div class="mobile_text_wrap">
+          <div class="link_list_wrap">
+            <ul>
+              <li><a href="#none">이용 약관</a></li>
+              <li><a href="#none">여객 운송 약관</a></li>
+              <li><a href="#none">개인정보 처리방침</a></li>
+            </ul>
+          </div>
+          <div class="sns_icon_wrap">
+            <a href="#none" class="icon_sprite_img">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+            </a>
+            <a href="#none" class="icon_sprite_img">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+            </a>
+            <a href="#none" class="icon_sprite_img">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+            </a>
+            <a href="#none" class="icon_sprite_img">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon white">
+              <img src="img/icon/snsIcon.png" alt="" class="sns_icon color">
+            </a>
+          </div>
+          <div class="footer_text_divide_wrap">
+            <span>고객센터 1599-1500 (09:00~19:00)</span>
+          </div>
+          <div class="footer_text_divide_wrap">
+            <span>마케팅 제휴 e-mail : partnership@jejuair.net</span>
+          </div>
+          <div class="footer_text_divide_wrap">
+            <span>(주)제주항공 사업자등록번호 : 616-81-50527 대표이사 : 김이배<br>제주특별자치도 제주시 신대로 64(연동, 건설공제회관 3층)</span>
+            <span>Copyright &#169; JEJUAIR. All Rights Reserved.</span>
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </footer>
+  <div class="footer_mobile_nav">
+    <ul class="footer_nav_wrap">
+      <li class="footer_nav_list">
+        <a href="#none">
+          <div class="fnb_image_wrap">
+            <img src="img/mobliefnb/mobileHome.png" alt="" class="fnb_image">
+            <img src="img/mobliefnb/mobileHomepoint.png" alt="" class="fnb_image_color">
+          </div>
+          <p class="fnb_text">홈</pc>
+        </a>
+      </li>
+      <li class="footer_nav_list">
+        <a href="#none">
+          <div class="fnb_image_wrap">
+            <img src="img/mobliefnb/mobilePlane.png" alt="" class="fnb_image">
+            <img src="img/mobliefnb/mobilePlanepoint.png" alt="" class="fnb_image_color">
+          </div>
+          <p class="fnb_text">예매</pc>
+        </a>
+      </li>
+      <li class="footer_nav_list">
+        <a href="#none">
+          <div class="fnb_image_wrap">
+            <img src="img/mobliefnb/mobileTicket.png" alt="" class="fnb_image">
+            <img src="img/mobliefnb/mobileTicketpoint.png" alt="" class="fnb_image_color">
+          </div>
+          <p class="fnb_text">모바일 탑승권</pc>
+        </a>
+      </li>
+      <li class="footer_nav_list">
+        <a href="#none">
+          <div class="fnb_image_wrap">
+            <img src="img/mobliefnb/mobileShopping.png" alt="" class="fnb_image">
+            <img src="img/mobliefnb/mobileShoppingpoint.png" alt="" class="fnb_image_color">
+          </div>
+          <p class="fnb_text">부가서비스</pc>
+        </a>
+      </li>
+      <li class="footer_nav_list">
+        <a href="#none">
+          <div class="fnb_image_wrap">
+            <img src="img/mobliefnb/mobileMypage.png" alt="" class="fnb_image">
+            <img src="img/mobliefnb/mobileMypagepoint.png" alt="" class="fnb_image_color">
+          </div>
+          <p class="fnb_text">마이페이지</pc>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Datepicker -->
+  <script src="js/Datepicker/datepicker.js"></script>
+  
+
+  <!-- script -->
+  <script src="js/header.js"></script>
+  <script src="js/section01_main.js"></script>
+  <script src="js/section02_ticketing.js"></script>
+  <script src="js/section02_inquiries.js"></script>
+  <script src="js/section03_service.js"></script>
+  <script src="js/section04_recommend.js"></script>
+  <script src="js/section05_additional_service.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/back_airplane.js"></script>
+
+  <!-- 반응형 script -->
+  <script src="js/responsive_js/responsive_header.js"></script>
+  <script src="js/responsive_js/responsiv_section01_main.js"></script> 
+</body>
+</html>

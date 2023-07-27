@@ -1,0 +1,11 @@
+@media screen and (max-width : 1280px) {
+  .inner{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:765px) {
+  .inner{
+    width: 95%;
+  }
+}

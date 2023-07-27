@@ -1,0 +1,309 @@
+.header{
+  background-color: white;
+  border-bottom: 1px solid var(--border-color1);
+}
+.header_mobile_background{
+  display: none;
+}
+/* header_util */
+.header_util{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+
+}
+.header_util:before, .header_util:after{
+  content: "";
+  position: absolute;
+  width: 50vw;
+  height: 1px;
+  bottom: 0px;
+  background-color: var(--border-color1);
+}
+  .header_util:before{
+    right: 50%;
+  }
+  .header_util:after{
+    left: 50%;
+  }
+.targetUserSelect{
+  border: none;
+  padding : 7px 1.5rem 7px 0px;
+}
+.header_util ul{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header_util_list{
+  margin-left: 2rem;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.header_util_list a{
+  display: block;  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.header_util_list i{
+  padding-right: 5px;
+}
+.select_language{
+}
+.select_language select{
+  border: none;
+  padding-right: 1rem;
+}
+
+
+
+/* header_main */
+.header_main{
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+
+.main_logo img{
+  height: 36px;
+}
+.main_logo_img.color{
+  display : block;
+}
+.main_logo_img.white{
+  display : none;
+}
+.mobile_nav_wrap{
+  display : none;
+}
+.mobile_hamburger{
+  display: none;
+}
+.gnb{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+.gnb_list{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 8.07rem; */
+  padding : 0px 1.5rem;
+}
+.gnb_list span{
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.gnb_list a{
+}
+.gnb_hover_bar{
+  width: 0px; /* gnb_list와 같은 길이로 script에서 정의 */
+  height: 5px;
+  position: absolute;
+  background-color: var(--point-color1);
+  
+  left: 0;
+  bottom: 0;
+
+  transition: 0.5s;
+}
+
+
+.rnb{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left : 3rem;
+  position: relative;
+}
+.rnb_list{
+  width: 6rem;
+  height: 100%;
+}
+.rnb_list a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal_search_bar{
+  position: absolute;
+  width: 25rem;
+  height: 0rem;
+  top : 6rem;
+  background-color: #fff;
+  z-index: 20;
+  right: 0;
+  overflow: hidden;
+
+  transition: 0.2s;
+}
+  .modal_search_bar.visible{
+    height: 4rem;
+    overflow: visible;
+  }
+.mobile_modal_search_bar{
+  position: absolute;
+  width: 25rem;
+  height: 0rem;
+  top : 6rem;
+  background-color: #fff;
+  z-index: 20;
+  right: 0;
+  overflow: hidden;
+
+  transition: 0.2s;
+}
+  .mobile_modal_search_bar.visible{
+    height: 4rem;
+    overflow: visible;
+  }
+.search_bar_wrap{
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color1);
+  box-shadow: 0px 0px 3px var(--border-color1);
+  width: 100%;
+  height: 100%;
+}
+.modal_arrow{
+  background-color: white;
+  position: relative;
+}
+.modal_arrow::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  transform: rotate(-45deg);
+  background-color: white;
+  border: 1px solid var(--border-color1);
+  box-shadow: 0px 0px 3px var(--border-color1);
+}
+.search_bar{
+  width: 80%;
+  height: 100%;
+  padding :5px 10px;
+  border : none;
+  padding-left: 10px;
+  font-size: var(--span-size);
+  background-color: rgba(187, 187, 187, 0.15);
+  border-radius: 5px;
+}
+  .search_bar:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+    background-color: white;
+  }
+
+
+.search_bar_search_button,.search_bar_close_button,.mobile_search_bar_close_button{
+  z-index: 20;
+  padding :5px 10px;
+  height: 100%;
+  background-color: white;
+  width: 20%;
+}
+.search_bar_search_button{
+  border-right: 1px solid var(--border-color1);
+}
+.search_bar_close_button i,.mobile_search_bar_close_button i{
+  font-size: var(--span-size);
+}
+.snb_inner{
+  margin: 0px;
+  height: 0px;
+  position: relative;
+}
+
+/* lnb snb */
+.lnb{
+  border-bottom : 1px solid var(--border-color1);
+}
+.header_sub{ 
+  width: 100%;
+  display: flex;
+  height: 0px;  /* javascript로 제어할 것 */
+  justify-content: space-around;
+  position: absolute;
+  
+  border-top: 1px solid var(--border-color1);
+
+  transition: 0.3s;
+  overflow: hidden;
+
+  z-index: 5;
+}
+  .header_sub.visible{ 
+  background-color: #fff;
+  overflow: visible;
+  border-bottom : 1px solid var(--border-color1)
+  }
+
+.sub_nav{
+  width: 100%;
+  height: 0%; /* javascript로 제어 0->100% */
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+  .sub_nav.visible{
+    opacity: 1;
+    height: 100%; /*javascript로 제어 0->100%*/
+  }
+
+.lnb{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+
+}
+.lnb_list{
+  width : 100%;
+  text-align: center;
+  margin : 2rem 5%;
+}
+.lnb_list span{
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+.snb{
+  
+  margin-top : 2rem;
+}
+.snb_list{
+  transition: 0.2s;
+}
+  .snb_list:hover{
+  }
+.snb_list a{
+  display: block;
+  padding : 8.5px;
+  
+  transition: 0.2s;
+}
+  .snb_list a:hover{
+    color : var(--point-color1);
+  }
+

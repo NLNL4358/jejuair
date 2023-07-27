@@ -1,0 +1,86 @@
+
+.gap_section{
+  /* width: 100vw; */
+  width: 100%;
+  height: 300vh;
+  cursor: default;
+  pointer-events: none;
+  overflow: hidden;
+  position: relative;
+  z-index: -5;
+
+}
+.fixed_wrap{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.gap_img_wrap{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+
+  
+  will-change: scroll-position;
+  will-change: top;
+  /* will-change!! 변화가 예상되는 요소를 브라우저에게 미리 알려주는 속성  실제 요소가 변화되기 전에 적절하게 최적화를 할 수 있다 
+  'scroll-position'스크롤 할 때 엘리먼트의 위치가 변경될 것을 알려준다. 
+  'top' top이 변할것을 알려준다.
+  이 값을 설정하면 브라우저는 스크롤 가능한 엘리먼트를 미리 최적화 하여 랜더링 하게된다. 
+  한 번에 많은 양을 스크롤하거나 빠른 스크롤이 필요한 경우에 사용한다.
+
+  렉을 줄이는 방법으로 top, scroll, left가 변화될 dom에는 will-change를 넣어주자 !!
+  */
+}
+
+.gap_section img{
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.gap_section .gap_text_img{
+  /* width: 20vw; */
+  width: auto;
+  height: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 5;
+  
+  will-change: scroll-position;
+  /* 비행기는 left,bottom가 움직인다. */
+}
+.gap_section .plane_wing{
+  bottom: -10%;
+  height: 50%;
+  will-change: scroll-position;
+  will-change: left;
+  will-change: bottom;
+  /* 비행기는 left,bottom가 움직인다. */
+}
+.gap_section .cloud_back{
+  width: 200vw;
+  height: 100vh;
+
+  will-change: scroll-position;
+  will-change: left;
+  /* 뒷배경 구름은 left가 움직인다. */
+}
+.gap_section .png_cloud{
+  /* width: 100vw; */
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+
+  will-change: scroll-position;
+  will-change: bottom;
+  /* 앞쪽 구름은 bottom가 움직인다. */
+}
+.gap_section .jejuAirplane{
+  width: 60%;
+  left: 30%;
+  top : 20%;
+}

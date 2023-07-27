@@ -1,0 +1,16 @@
+@media screen and (max-width : 1280px) {
+  .swiper_wrap{
+    width: 100%;
+  }
+
+  .recommendSwiper{
+  }
+  .swiper-button-prev{
+    margin-left: 1rem;
+  }
+  .swiper-button-next{
+    margin-right: 1rem;
+  }
+
+  
+}
