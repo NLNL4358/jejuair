@@ -18,7 +18,6 @@
 }
 html,body{
   width: 100%;
-
   /* overflow를 clip으로 & overflow-y 만 visible 하여 X축의 overflow만 제거하도록 */
   overflow: clip;
   overflow-y: visible;

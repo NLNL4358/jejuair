@@ -19,7 +19,7 @@ $( function() {
       setClass( this );
     }),
     from = $( "#from" ).datepicker({
-        defaultDate: "+1w",
+        defaultDate: "+0w",
         changeMonth: true,
         // numberOfMonths: 2
         numberOfMonths: numberOfMonthDynamically /* 유동적으로 생성 */
@@ -39,7 +39,7 @@ $( function() {
 
     /* 추가 출도착 조회*/
     fromInquiries = $( "#from_inquiries" ).datepicker({
-      defaultDate: "+1w",
+      defaultDate: "+0w",
       changeMonth: true,
       // numberOfMonths: 2
       numberOfMonths: numberOfMonthDynamically
@@ -105,6 +105,7 @@ $( function() {
     changeCalenderToMobile();
   })
 
-
+  /* 초기화 */
+  changeCalenderToMobile();
 
 } );

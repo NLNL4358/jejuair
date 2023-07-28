@@ -40,7 +40,7 @@
   .sub_notice i, .sub_notice{
   }
 
-  .depart_city_select_wrap, .arrive_city_select_wrap {
+  .depart_city_select_wrap.active, .arrive_city_select_wrap.active{
     width: 200%;
   }
   .continent_list_wrap ul{
@@ -75,8 +75,14 @@
 }
 
 @media screen and (max-width:960px) {
-  .depart_city_select_wrap, .arrive_city_select_wrap {
-    width: 236.27%;
+  .depart_city_select_wrap.active, .arrive_city_select_wrap.active{
+    position : fixed;
+    top: 50%;
+    left : 0%;
+    width: 100vw;
+    z-index : 30;
+    height: 100vh;
+    transform: translate(0% , -50%);
   }
   .quick_nav{
     width: 60%;
@@ -118,8 +124,8 @@
   .quick_menu_contents.selected{
     height: 26rem;
   }
-  .depart_city_select_wrap, .arrive_city_select_wrap {
-    width: 200%;
+  .depart_city_select_wrap.active, .arrive_city_select_wrap.active{
+    /* width: 200%; */
   }
   .continent_list_wrap{
     position: relative;
@@ -299,7 +305,7 @@
   .ticketing_btn{
     height: 3.5rem;
   }
-  .depart_city_select_wrap, .arrive_city_select_wrap {
-    width: 260%;
+  .depart_city_select_wrap.active, .arrive_city_select_wrap.active{
+    /* width: 260%; */
   }
 }

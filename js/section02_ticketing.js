@@ -29,7 +29,8 @@ let mobileTicketInputs = document.querySelectorAll(".users_state.not_logined inp
 let reservationSearchBtn = document.querySelector(".reservation_search_btn");
 
 
-
+/* 헤더가 자꾸 눌려서 안눌리게끔 잠깐 끄는 용도 */
+let headerDOM = document.querySelector(".header");
 
 
 
@@ -146,6 +147,24 @@ function reservationSearchBtnClassManager(){
 }
 
 
+/* 헤더 키고 끄기 */
+function headerOnOff(turnOff){
+  if(turnOff){
+    /* 꺼라 */
+    $(headerDOM).css({
+      "pointerEvents" : "none",
+      "zIndex" : "0",
+    });
+  }
+  else{
+    /* 켜라 */
+    $(headerDOM).css({
+      "pointerEvents" : "all",
+      "zIndex" : "10"
+    });
+  }
+}
+
 
   /* ====== 이벤트 리스너 ====== */
 for(let i = 0 ; i < quickMenu.length ; i++){ /* 퀵메뉴 리스너 */
@@ -174,16 +193,19 @@ for(let i = 0 ; i < departCityContinentList.length ; i++){ /* 출발지 - 대륙
 }
 
 departCityButton.addEventListener("click", function(e){
+  headerOnOff(true);
   clickDepartCityButton();
   closeArriveCityWrap();
 })
 
 departCityCloseButton.addEventListener("click", function(e){
+  headerOnOff(false);
   closeDepartCityWrap();
 })
 
 for(let i = 0 ; i < departCityStationList.length ; i++){
   departCityStationList[i].addEventListener("click", function(e){
+    headerOnOff(true);
     clickDepartStationList(this.dataset.stationname);
     closeDepartCityWrap();
     departCityTextSelected();
@@ -200,18 +222,21 @@ for(let i = 0 ; i < arriveCityContinentList.length ; i++){ /* 도착지 - 대륙
 }
 
 arriveCityButton.addEventListener("click", function(e){
+  headerOnOff(true);
   clickArriveCityButton();
   closeDepartCityWrap();
 })
 
 arriveCityCloseButton.addEventListener("click", function(e){
   closeArriveCityWrap();
+  headerOnOff(false);
 })
 for(let i = 0 ; i < arriveCityStationList.length ; i++){
   arriveCityStationList[i].addEventListener("click", function(e){
     clickArriveStationList(this.dataset.stationname);
     closeArriveCityWrap();
     arriveCityTextSelected();
+    headerOnOff(true);
   })
 }
 

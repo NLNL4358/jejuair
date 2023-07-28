@@ -28,7 +28,7 @@
 #ui-datepicker-div{
   bottom: 0%;
   border: none;
-  margin-top : 0.7rem !important;
+  margin-top : 0.7rem;
   padding : 0.7rem;
   height: fit-content;
   background-color: white;

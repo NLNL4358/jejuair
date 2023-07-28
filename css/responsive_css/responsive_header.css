@@ -57,6 +57,7 @@
 
   .mobile_nav_wrap{
     display: block;
+    height: max-content;
     background-color: white;
     position: absolute;
     overflow: hidden;
