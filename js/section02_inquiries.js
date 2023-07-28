@@ -25,7 +25,8 @@ let arriveCityStationListInquiries = document.querySelectorAll(".departure_and_a
 let inquiriesNoticeRadio = document.querySelectorAll(".inquiries_notice_radio_wrap input");
 let inquiriesSearchFlight = document.querySelectorAll(".departure_and_arrival_inquiries_wrap .search_flight");
 
-
+/* 헤더가 자꾸 눌려서 안눌리게끔 잠깐 끄는 용도 */
+let headerDOM = document.querySelector(".header");
 
 /* 함수 */
 
@@ -87,6 +88,23 @@ function changeSearchType(idx){
 }
 
 
+/* 헤더 키고 끄기 */
+function headerOnOff(turnOff){
+  if(turnOff){
+    /* 꺼라 */
+    $(headerDOM).css({
+      "pointerEvents" : "none",
+      "zIndex" : "0",
+    });
+  }
+  else{
+    /* 켜라 */
+    $(headerDOM).css({
+      "pointerEvents" : "all",
+      "zIndex" : "10"
+    });
+  }
+}
 
 
 
@@ -95,16 +113,19 @@ function changeSearchType(idx){
 
 /* 출발지 */
 departCityButtonInquiries.addEventListener("click", function(e){
+  headerOnOff(true);
   clickDepartCityButtonInquiries();
   closeArriveCityWrapInquiries();
 })
 
 departCityCloseButtonInquiries.addEventListener("click", function(e){
+  headerOnOff(false);
   closeDepartCityWrapInquiries();
 })
 
 for(let i = 0 ; i < departCityStationListInquiries.length ; i++){
   departCityStationListInquiries[i].addEventListener("click", function(e){
+    headerOnOff(true);
     clickDepartStationListInquiries(this.dataset.stationname);
     closeDepartCityWrapInquiries();
     departCityTextSelectedInquiries();
@@ -122,15 +143,18 @@ for(let i = 0 ; i < arriveCityContinentListInquiries.length ; i++){ /* 도착지
 }
 
 arriveCityButtonInquiries.addEventListener("click", function(e){
+  headerOnOff(true);
   clickArriveCityButtonInquiries();
   closeDepartCityWrapInquiries();
 })
 
 arriveCityCloseButtonInquiries.addEventListener("click", function(e){
+  headerOnOff(false);
   closeArriveCityWrapInquiries();
 })
 for(let i = 0 ; i < arriveCityStationListInquiries.length ; i++){
   arriveCityStationListInquiries[i].addEventListener("click", function(e){
+    headerOnOff(false);
     clickArriveStationListInquiries(this.dataset.stationname);
     closeArriveCityWrapInquiries();
     arriveCityTextSelectedInquiries();

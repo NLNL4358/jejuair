@@ -233,10 +233,10 @@ arriveCityCloseButton.addEventListener("click", function(e){
 })
 for(let i = 0 ; i < arriveCityStationList.length ; i++){
   arriveCityStationList[i].addEventListener("click", function(e){
+    headerOnOff(false);
     clickArriveStationList(this.dataset.stationname);
     closeArriveCityWrap();
     arriveCityTextSelected();
-    headerOnOff(true);
   })
 }
 

@@ -234,7 +234,7 @@
 
 /* lnb snb */
 .lnb{
-  border-bottom : 1px solid var(--border-color1);
+  /* border-bottom : 1px solid var(--border-color1); */
 }
 .header_sub{ 
   width: 100%;
@@ -253,7 +253,7 @@
   .header_sub.visible{ 
   background-color: #fff;
   overflow: visible;
-  border-bottom : 1px solid var(--border-color1)
+  /* border-bottom : 1px solid var(--border-color1) */
   }
 
 .sub_nav{
