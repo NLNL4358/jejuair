@@ -112,6 +112,13 @@ function headerOnOff(turnOff){
 /* 이벤트 */
 
 /* 출발지 */
+
+for(let i = 0 ; i < departCityContinentListInquiries.length ; i++){ /* 출발지 - 대륙선택 리스너 [ 대륙선택, 지역팝업] */
+  departCityContinentListInquiries[i].addEventListener("mouseover", function(e){
+    clickDepartCityContinentList(i);
+  })
+}
+
 departCityButtonInquiries.addEventListener("click", function(e){
   headerOnOff(true);
   clickDepartCityButtonInquiries();
